@@ -17,8 +17,8 @@ const Auth = () => {
 
     return (
         <div className="relative h-full w-full bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-            {/* TODO(alb): change opacity on large screens?*/}
-            <div className="bg-black w-full h-full lg:bg-opacity-70">
+            {/* TODO(alb): change opacity on large/medium screens?*/}
+            <div className="bg-black w-full h-full md:bg-opacity-70">
                 <nav className="px-12 py-5">
                     <img src="/images/logo.png" alt="logo" className="h-48" />
                 </nav>
