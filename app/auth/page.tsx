@@ -4,8 +4,10 @@ import Input from "@/components/Input";
 import axios from "axios";
 import { log } from "console";
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Auth = () => {
+    const router = useRouter();
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -18,6 +20,22 @@ const Auth = () => {
         );
     }, []);
 
+    const login = useCallback(async () => {
+        try {
+            await signIn("credentials", {
+                email,
+                password,
+                redirect: false,
+                callbackUrl: "/",
+            });
+
+            router.push("/");
+        } catch (error) {
+            // TODO(alb): change this for production!
+            console.log(error);
+        }
+    }, [email, password, router]);
+
     const register = useCallback(async () => {
         try {
             await axios.post("/api/register", {
@@ -25,11 +43,13 @@ const Auth = () => {
                 username,
                 password,
             });
+
+            login();
         } catch (error) {
             // TODO(alb): change this for production!
             console.log(error);
         }
-    }, [email, username, password]);
+    }, [email, username, password, login]);
 
     return (
         <div className="relative h-full w-full bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
@@ -76,7 +96,7 @@ const Auth = () => {
                             />
                         </div>
                         <button
-                            onClick={register}
+                            onClick={account == "login" ? login : register}
                             className="bg-cyan-600 py-3 text-white rounded-md w-full mt-10 hover:bg-cyan-700 transition"
                         >
                             {account == "login" ? "Login" : "Sign up"}

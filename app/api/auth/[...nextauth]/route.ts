@@ -3,7 +3,7 @@ import Credentials from "next-auth/providers/credentials";
 import prismadb from "@/lib/prismadb";
 import { compare } from "bcrypt";
 
-export default NextAuth({
+const handler = NextAuth({
     providers: [
         Credentials({
             id: "credentials",
@@ -57,3 +57,5 @@ export default NextAuth({
     },
     secret: process.env.NEXTAUTH_SECRET,
 });
+
+export { handler as GET, handler as POST };
