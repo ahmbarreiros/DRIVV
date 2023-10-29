@@ -4,7 +4,11 @@ import Input from "@/components/Input";
 import axios from "axios";
 import { log } from "console";
 import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
+
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub, FaTwitch } from "react-icons/fa";
+import { sign } from "crypto";
 
 const Auth = () => {
     const router = useRouter();
@@ -52,6 +56,8 @@ const Auth = () => {
     }, [email, username, password, login]);
 
     return (
+        // TODO(alb): Center logo?
+
         <div className="relative h-full w-full bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
             {/* TODO(alb): change opacity on large/medium screens?*/}
             <div className="bg-black w-full h-full md:bg-opacity-70">
@@ -64,7 +70,6 @@ const Auth = () => {
                         <h2 className="text-white text-4xl mb-8 font-semibold">
                             {account == "login" ? "Sign in" : "Register"}
                         </h2>
-
                         <div className="flex flex-col gap-4">
                             {account == "register" && (
                                 <Input
@@ -101,6 +106,22 @@ const Auth = () => {
                         >
                             {account == "login" ? "Login" : "Sign up"}
                         </button>
+                        <div className="flex flex-row items-center gap-4 mt-8 justify-center">
+                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
+                                <FcGoogle size={30} />
+                            </div>
+                            <div
+                                onClick={() => {
+                                    signIn("github", { callbackUrl: "/" });
+                                }}
+                                className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
+                            >
+                                <FaGithub size={30} />
+                            </div>
+                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition color-purple">
+                                <FaTwitch color={"purple"} size={25} />
+                            </div>
+                        </div>
                         <p className="text-neutral-500 mt-12">
                             {account == "login"
                                 ? "First time using Drivv?"

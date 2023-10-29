@@ -13,7 +13,8 @@ datasource db {
 model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   email String? @unique
-  username String
+  name String?
+  username String?
   image String?
   emailVerified DateTime?
   hashedPassword String?
@@ -40,9 +41,9 @@ model Account {
   provider String
   providerAccountId String
   refreshToken String? @db.String
-  accessToken String? @db.String
+  access_token String? @db.String
   expiresAt Int?
-  tokenType String?
+  token_type String?
   scope String?
   idToken String? @db.String
   sessionState String?
