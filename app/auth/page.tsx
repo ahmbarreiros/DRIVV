@@ -107,7 +107,14 @@ const Auth = () => {
                             {account == "login" ? "Login" : "Sign up"}
                         </button>
                         <div className="flex flex-row items-center gap-4 mt-8 justify-center">
-                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
+                            <div
+                                onClick={() => {
+                                    signIn("google", {
+                                        callbackUrl: "/",
+                                    });
+                                }}
+                                className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
+                            >
                                 <FcGoogle size={30} />
                             </div>
                             <div
@@ -118,7 +125,12 @@ const Auth = () => {
                             >
                                 <FaGithub size={30} />
                             </div>
-                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition color-purple">
+                            <div
+                                onClick={() => {
+                                    signIn("twitch", { callbackUrl: "/" });
+                                }}
+                                className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition color-purple"
+                            >
                                 <FaTwitch color={"purple"} size={25} />
                             </div>
                         </div>

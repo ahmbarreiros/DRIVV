@@ -27,7 +27,7 @@ model User {
 
 model Session {
   id String @id @default(auto()) @map("_id") @db.ObjectId
-  sessionToken String @unique
+  session_token String @unique
   userId String @db.ObjectId
   expires DateTime
 
@@ -40,12 +40,12 @@ model Account {
   type String
   provider String
   providerAccountId String
-  refreshToken String? @db.String
+  refresh_token String? @db.String
   access_token String? @db.String
-  expiresAt Int?
+  expires_at Int?
   token_type String?
   scope String?
-  idToken String? @db.String
+  id_token String? @db.String
   sessionState String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -71,4 +71,5 @@ model VOD {
   server String
   duration String
   champion String
+  patch String
 }
