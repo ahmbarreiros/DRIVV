@@ -1,4 +1,4 @@
-import NextAuth from "next-auth/next";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import prismadb from "@/lib/prismadb";
 import { compare } from "bcrypt";
@@ -9,19 +9,19 @@ import TwitchProvider from "next-auth/providers/twitch";
 
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
-const handler = NextAuth({
+export const authOptions: NextAuthOptions = {
     providers: [
         GithubProvider({
-            clientId: process.env.GITHUB_ID || "",
-            clientSecret: process.env.GITHUB_SECRET || "",
+            clientId: process.env.GITHUB_ID ?? "",
+            clientSecret: process.env.GITHUB_SECRET ?? "",
         }),
         GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID || "",
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
+            clientId: process.env.GOOGLE_CLIENT_ID ?? "",
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
         }),
         TwitchProvider({
-            clientId: process.env.TWITCH_ID || "",
-            clientSecret: process.env.TWITCH_SECRET || "",
+            clientId: process.env.TWITCH_ID ?? "",
+            clientSecret: process.env.TWITCH_SECRET ?? "",
         }),
         Credentials({
             id: "credentials",
@@ -75,6 +75,7 @@ const handler = NextAuth({
         secret: process.env.NEXTAUTH_JWT_SECRET,
     },
     secret: process.env.NEXTAUTH_SECRET,
-});
+};
 
+export const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };

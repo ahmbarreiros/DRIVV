@@ -1,14 +1,12 @@
 "use client";
-import { SetStateAction, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import Input from "@/components/Input";
 import axios from "axios";
-import { log } from "console";
 import { signIn } from "next-auth/react";
 import { redirect, useRouter } from "next/navigation";
 
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub, FaTwitch } from "react-icons/fa";
-import { sign } from "crypto";
 
 const Auth = () => {
     const router = useRouter();
