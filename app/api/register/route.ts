@@ -5,7 +5,7 @@ import prismadb from "@/lib/prismadb";
 export async function POST(req: Request) {
     try {
         const data = await req.json();
-        const { username, email, password } = data;
+        const { name, email, password } = data;
 
         //   TODO(alb): handle username/email/password undefined better later.
         if (typeof email !== "string")
@@ -34,7 +34,7 @@ export async function POST(req: Request) {
         const user = await prismadb.user.create({
             data: {
                 email,
-                username,
+                name,
                 hashedPassword,
                 image: "",
                 emailVerified: new Date(),

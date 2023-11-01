@@ -1,6 +1,5 @@
 import "./globals.css";
-import { NextAuthProvider } from "@/app/components/SessionProvider";
-import { getServerSession } from "next-auth";
+import { NextAuthProvider } from "@/components/SessionProvider";
 
 export const metadata = {
     title: "Next.js",
