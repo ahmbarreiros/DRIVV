@@ -3,14 +3,14 @@ import { useCallback, useState } from "react";
 import Input from "@/components/Input";
 import axios from "axios";
 import { signIn } from "next-auth/react";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub, FaTwitch } from "react-icons/fa";
 
 const Auth = () => {
     const router = useRouter();
-    const [username, setUsername] = useState("");
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -42,7 +42,7 @@ const Auth = () => {
         try {
             await axios.post("/api/register", {
                 email,
-                username,
+                name,
                 password,
             });
 
@@ -51,7 +51,7 @@ const Auth = () => {
             // TODO(alb): change this for production!
             console.log(error);
         }
-    }, [email, username, password, login]);
+    }, [email, name, password, login]);
 
     return (
         // TODO(alb): Center logo?
@@ -71,12 +71,12 @@ const Auth = () => {
                         <div className="flex flex-col gap-4">
                             {account == "register" && (
                                 <Input
-                                    label="Username"
+                                    label="Name"
                                     onChange={(event: any) => {
-                                        setUsername(event.target.value);
+                                        setName(event.target.value);
                                     }}
-                                    id="username"
-                                    value={username}
+                                    id="name"
+                                    value={name}
                                 />
                             )}
                             <Input
