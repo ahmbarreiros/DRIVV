@@ -10,16 +10,10 @@ interface VODListProps {
 }
 
 const VODList: React.FC<VODListProps> = ({ data, title }) => {
-    console.log("----- data: -----");
-    console.log(data);
-    console.log("-----       -----");
-    console.log("----- title: -----");
-    console.log(title);
-    console.log("-----       -----");
-
     if (isEmpty(data)) {
         return null;
     }
+
     return (
         <div className="px-4 md:px-12 mt-4 space-y-8">
             <div className="">
@@ -27,9 +21,13 @@ const VODList: React.FC<VODListProps> = ({ data, title }) => {
                     {title}
                 </p>
                 <div className="grid grid-cols-4 gap-2">
-                    {data.vods.map((vod: any) => (
-                        <VODCard key={vod.id} data={vod} />
-                    ))}
+                    {title === "My Library"
+                        ? data?.map((vod: any) => (
+                              <VODCard key={vod.id} data={vod} />
+                          ))
+                        : data?.vods?.map((vod: any) => (
+                              <VODCard key={vod.id} data={vod} />
+                          ))}
                 </div>
             </div>
         </div>
