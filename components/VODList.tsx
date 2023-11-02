@@ -5,7 +5,7 @@ import VODCard from "./VODCard";
 
 interface VODListProps {
     // TODO(alb): Record<string, any>[]; produces error, change this later. for now it works just fine.
-    data: any;
+    data: Record<string, any>[];
     title: String;
 }
 
@@ -21,13 +21,9 @@ const VODList: React.FC<VODListProps> = ({ data, title }) => {
                     {title}
                 </p>
                 <div className="grid grid-cols-4 gap-2">
-                    {title === "My Library"
-                        ? data?.map((vod: any) => (
-                              <VODCard key={vod.id} data={vod} />
-                          ))
-                        : data?.vods?.map((vod: any) => (
-                              <VODCard key={vod.id} data={vod} />
-                          ))}
+                    {data.map((vod) => (
+                        <VODCard key={vod.id} data={vod} />
+                    ))}
                 </div>
             </div>
         </div>

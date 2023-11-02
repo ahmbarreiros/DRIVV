@@ -4,10 +4,12 @@ import { GrScheduleNew } from "react-icons/gr";
 import FavoriteButtons from "./FavoriteButtons";
 
 interface VODCardProps {
-    data: any;
+    data: Record<string, any>;
 }
 
 const VODCard: React.FC<VODCardProps> = ({ data }) => {
+    console.log(data);
+
     return (
         <div className="group bg-zinc-900 col-span relative h-[12vw]">
             <img
@@ -29,7 +31,7 @@ const VODCard: React.FC<VODCardProps> = ({ data }) => {
                         >
                             <BsFillPlayFill size={20} />
                         </div>
-                        <FavoriteButtons vodId={data?.id} />
+                        <FavoriteButtons vodId={data.id} />
                     </div>
                     <div className="flex flex-row  mt-4 items-center">
                         <BsFillCalendarCheckFill className="text-green-400 mr-2" />

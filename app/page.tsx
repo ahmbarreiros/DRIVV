@@ -34,7 +34,7 @@ export default function Home() {
             <NavBar />
             <Billboard />
             <div className="pb-40">
-                <VODList title="Trending now" data={vods} />
+                <VODList title="Trending now" data={vods.vods} />
                 <VODList title="My Library" data={favorites.favoriteVODs} />
             </div>
         </main>
