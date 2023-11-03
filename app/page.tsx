@@ -37,9 +37,13 @@ export default function Home() {
             <InfoModal visible={isOpen} onClose={closeModal} />
             <NavBar />
             <Billboard />
-            <div className="pb-40">
-                <VODList title="Trending now" data={vods.vods} />
+            <div className="pb-40   ">
                 <VODList title="My Library" data={favorites.favoriteVODs} />
+                <VODList title="VODs" data={vods.vods} />
+                <VODList title="Top" data={vods.vods} />
+                <VODList title="Jungle" data={vods.vods} />
+                <VODList title="Mid" data={vods.vods} />
+                <VODList title="Bot" data={vods.vods} />
             </div>
         </main>
     );
