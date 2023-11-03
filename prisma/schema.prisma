@@ -71,6 +71,6 @@ model VOD {
   server String
   duration String
   champion String
+  lanePlayed String
   patch String
-  lane String
 }

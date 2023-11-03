@@ -15,7 +15,6 @@ export default function Watch({
     const router = useRouter();
     const vodId = params?.vodId;
     const { data } = useVOD(vodId);
-    console.log(data);
 
     return (
         <div className="h-screen w-screen bg-black">

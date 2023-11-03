@@ -6,11 +6,11 @@ import useFavorites from "@/hooks/useFavorites";
 import { BsFillHeartFill, BsHeart } from "react-icons/bs";
 import useCurrentUser from "@/hooks/useCurrentUser";
 
-interface FavoriteButtonsProps {
+interface FavoriteButtonProps {
     vodId: string;
 }
 
-const FavoriteButtons: React.FC<FavoriteButtonsProps> = ({ vodId }) => {
+const FavoriteButton: React.FC<FavoriteButtonProps> = ({ vodId }) => {
     const { mutate: mutateFavorites } = useFavorites();
     const { data: currentUser, mutate } = useCurrentUser();
 
@@ -49,4 +49,4 @@ const FavoriteButtons: React.FC<FavoriteButtonsProps> = ({ vodId }) => {
         </div>
     );
 };
-export default FavoriteButtons;
+export default FavoriteButton;

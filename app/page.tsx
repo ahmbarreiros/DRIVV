@@ -7,6 +7,8 @@ import Billboard from "@/components/Billboard";
 import VODList from "@/components/VODList";
 import useVODList from "@/hooks/useVODList";
 import useFavorites from "@/hooks/useFavorites";
+import InfoModal from "@/components/InfoModal";
+import useInfoModal from "@/hooks/useInfoModel";
 
 export default function Home() {
     const { data: session, status } = useSession({
@@ -18,6 +20,7 @@ export default function Home() {
 
     const { data: vods = [], isLoading } = useVODList();
     const { data: favorites = [] } = useFavorites();
+    const { isOpen, closeModal } = useInfoModal();
 
     if (status === "loading") {
         return (
@@ -31,6 +34,7 @@ export default function Home() {
 
     return (
         <main className="select-none">
+            <InfoModal visible={isOpen} onClose={closeModal} />
             <NavBar />
             <Billboard />
             <div className="pb-40">
