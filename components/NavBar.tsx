@@ -48,7 +48,7 @@ const NavBar = () => {
     return (
         <nav className="w-full fixed z-40 select-none" ref={componentRef}>
             <div
-                className={`px-4 md:px-16 py-6 flex flex-row items-center transition duration-500 ${
+                className={`px-4 md:px-16 py-2 flex flex-row items-center transition duration-500 ${
                     backgroundVisibility ? "bg-zinc-900/90" : ""
                 }`}
             >
@@ -57,13 +57,13 @@ const NavBar = () => {
                     src="/images/logo.png"
                     alt="logo"
                 />
+                {/* TODO(alb): Change width where it changes visibility later */}
                 <div className="flex-row ml-8 gap-7 hidden md:flex">
                     <NavBarItem label="Home" />
-                    <NavBarItem label="VODs" />
                     <NavBarItem label="Top" />
+                    <NavBarItem label="Jungle" />
                     <NavBarItem label="Mid" />
                     <NavBarItem label="Bot" />
-                    <NavBarItem label="New & Popular" />
                     <NavBarItem label="My Library" />
                     <NavBarItem label="Browse by Region" />
                 </div>
@@ -83,10 +83,6 @@ const NavBar = () => {
                 <div className="flex flex-row ml-auto gap-7 items-center">
                     <div className="flex items-center gap-1 text-gray-200 hover:text-gray-300 cursor-pointer transition">
                         <BsSearch className="h-5 w-5" />
-                    </div>
-
-                    <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
-                        <BsBell className="h-5 w-5" />
                     </div>
                     <div
                         // TODO(alb): maybe set this differently if necessary.
