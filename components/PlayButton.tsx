@@ -14,9 +14,9 @@ const PlayButton: React.FC<PlayButtonProps> = ({ vodId, className }) => {
             onClick={() => {
                 router.push(`/watch/${vodId}`);
             }}
-            className={`bg-zinc rounded-full py-1 md:py-2 px-2 md:px-4 w-auto text-xs lg:text-lg font-semibold flex flex-row items-center justify-center hover:bg-neutral-300 transition duration ${className}`}
+            className={`${className}`}
         >
-            <BsFillPlayFill size={25} className="text-white" />
+            <BsFillPlayFill size={25} className="" />
         </button>
     );
 };

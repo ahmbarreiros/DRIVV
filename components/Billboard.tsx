@@ -44,11 +44,11 @@ const Billboard = () => {
                 <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
                     <PlayButton
                         vodId={data?.value?.id}
-                        className="border-2 border-white hover:border-[#6f24a6] hover:bg-[#6f24a6]"
+                        className="text-white bg-zinc rounded-full py-1 md:py-2 px-2 md:px-4 w-auto text-xs lg:text-lg font-semibold flex flex-row items-center justify-center hover:bg-[#6f24a6]/20 transition duration border-2 border-[#6f24a6] hover:bg-[#6f24a6]"
                     />
                     <button
                         onClick={handleOpenModal}
-                        className="bg-white bg-opacity-30 border-2 border-[#FFFFFF1A] text-white rounded-md py-1 md:py-2 px-2 md:px-4 w-auto text-xs lg:text-lg font-semibold flex flex-row items-center hover:bg-opacity-20 hover:border-2 hover:border-[#6f24a6]  transition"
+                        className="bg-[#6f24a6]/30 border-2 border-[#FFFFFF1A] text-white rounded-md py-1 md:py-2 px-2 md:px-4 w-auto text-xs lg:text-lg font-semibold flex flex-row items-center hover:bg-opacity-20 hover:border-2 hover:border-[#6f24a6]  transition"
                     >
                         <AiOutlineInfoCircle className="mr-1" />
                         More Info

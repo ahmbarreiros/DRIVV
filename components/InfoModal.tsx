@@ -60,7 +60,10 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                                 {data?.vod?.title}
                             </p>
                             <div className="flex flex-row gap-4 items-center">
-                                <PlayButton vodId={data?.vod?.id} />
+                                <div className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-zinc border-2 border-white text-white rounded-full flex justify-center items-center transition hover:bg-neutral-300 hover:text-[#6f24a6]">
+                                    {" "}
+                                    <PlayButton vodId={data?.vod?.id} />{" "}
+                                </div>
                                 <FavoriteButton vodId={data?.vod?.id} />
                             </div>
                         </div>

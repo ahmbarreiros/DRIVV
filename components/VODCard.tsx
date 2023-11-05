@@ -19,7 +19,7 @@ const VODCard: React.FC<VODCardProps> = ({ data }) => {
     }, [openModal, data?.id]);
 
     return (
-        <div className="group bg-zinc-900 col-span relative h-[12vw]">
+        <div className="group bg-[zinc-900] col-span relative h-[12vw]">
             <img
                 className="cursor-pointer object-cover transition duration shadow-xl rounded-md group-hover:opacity-90 sm:group-hover:opacity-0 delay-500 w-full h-[12vw]"
                 src={data.thumbnailUrl}
@@ -38,7 +38,7 @@ const VODCard: React.FC<VODCardProps> = ({ data }) => {
                     <div className="flex flex-row items-center gap-3">
                         <div
                             onClick={() => router.push(`/watch/${data?.id}`)}
-                            className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex justify-center items-center transition hover:bg-neutral-300"
+                            className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-zinc border-2 border-white text-white rounded-full flex justify-center items-center transition hover:bg-neutral-300 hover:text-[#6f24a6]"
                         >
                             <BsFillPlayFill size={20} />
                         </div>

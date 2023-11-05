@@ -25,6 +25,11 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
                         {data?.currentUser?.name}
                     </p>
                 </div>
+                <div className="px-3 group/item flex flex-row gap-3 items-center w-full justify-center">
+                    <p className="text-white text-sm group-hover/item:underline ">
+                        Settings
+                    </p>
+                </div>
                 <hr className="bg-gray-600 border-0 h-px my-4" />
                 <div
                     onClick={() => signOut()}
