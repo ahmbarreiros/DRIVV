@@ -73,4 +73,5 @@ model VOD {
   champion String
   lanePlayed String
   patch String
+  championType String[]
 }
