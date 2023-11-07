@@ -15,7 +15,6 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
     const [isVisible, setIsVisible] = useState(!!visible);
     const { vodId } = useInfoModal();
     const { data = {} } = useVOD(vodId);
-    console.log("data: ", data);
 
     useEffect(() => {
         setIsVisible(!!visible);

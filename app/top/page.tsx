@@ -18,10 +18,10 @@ export default function Home() {
         },
     });
 
-    const { data: vods = [], isLoading } = useVODTopList();
+    const { data: vods = [] } = useVODTopList();
     const { data: favorites = [] } = useFavorites();
     const { isOpen, closeModal } = useInfoModal();
-    const championsTypes = useChampionType(vods.vods);
+    const { data: championTypeObject, isLoading } = useChampionType();
     // vods.vods.forEach((element: Record<string, any>) => {
     //     if (!laneTypeArray.find(element.championType)) console.log(element);
     // });
@@ -35,7 +35,6 @@ export default function Home() {
             </div>
         );
     }
-
     return (
         <main className="select-none">
             <InfoModal visible={isOpen} onClose={closeModal} />

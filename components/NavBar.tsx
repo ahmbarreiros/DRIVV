@@ -59,8 +59,8 @@ const NavBar = () => {
                 />
                 {/* TODO(alb): Change width where it changes visibility later */}
                 <div className="flex-row ml-8 gap-7 hidden md:flex">
-                    <NavBarItem label="Home" />
-                    <NavBarItem label="Top" />
+                    <NavBarItem label="Home" redirection="/" />
+                    <NavBarItem label="Top" redirection="/top" />
                     <NavBarItem label="Jungle" />
                     <NavBarItem label="Mid" />
                     <NavBarItem label="Bot" />
