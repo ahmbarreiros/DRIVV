@@ -66,7 +66,7 @@ const VODCard: React.FC<VODCardProps> = ({ data }) => {
                             {data.champion}
                         </p>
                         <p className="text-white text-[10px] lg:text-sm">
-                            {data.lanePlayed}
+                            {data.role}
                         </p>
                         <p className="text-white text-[10px] lg:text-sm">
                             {data.server}

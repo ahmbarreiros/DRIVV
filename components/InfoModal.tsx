@@ -86,7 +86,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                                 {data?.vod?.champion}
                             </p>
                             <p className="text-white text-sm">
-                                {data?.vod?.lanePlayed}
+                                {data?.vod?.role}
                             </p>
                             <p className="text-white text-sm">
                                 {data?.vod?.server}

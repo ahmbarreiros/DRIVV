@@ -38,7 +38,7 @@ const Billboard = () => {
                     {data?.value?.description}
                 </p>
                 <p className="text-white text-[8px] md:text-[14px] h-full mt-3 md:mt-8 w-[90%] md:w-[80%] lg:w-[50%] drop-shadow-xl">
-                    {data?.value?.champion} {data?.value?.lanePlayed}{" "}
+                    {data?.value?.champion} {data?.value?.}{" "}
                     {data?.value?.server} {data?.value?.patch}
                 </p>
                 <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
