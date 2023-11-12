@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState, useEffect, useRef } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsFillCalendarCheckFill } from "react-icons/bs";
 import PlayButton from "@/components/PlayButton";
@@ -15,6 +15,25 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
     const [isVisible, setIsVisible] = useState(!!visible);
     const { vodId } = useInfoModal();
     const { data = {} } = useVOD(vodId);
+    const componentRef = useRef<HTMLDivElement>(null);
+
+    // useEffect(() => {
+    //     const handleClickOutside = (event: any) => {
+    //         if (
+    //             componentRef.current &&
+    //             !componentRef.current.contains(event.target as Node) &&
+    //             isVisible
+    //         ) {
+    //             handleClose();
+    //         }
+    //     };
+
+    //     window.addEventListener("click", handleClickOutside);
+
+    //     return () => {
+    //         window.removeEventListener("click", handleClickOutside);
+    //     };
+    // }, []);
 
     useEffect(() => {
         setIsVisible(!!visible);
@@ -32,7 +51,10 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
     }
 
     return (
-        <div className="z-50 transition duration-300 bg-black/80 flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0">
+        <div
+            className="z-50 transition duration-300 bg-black/80 flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0"
+            ref={componentRef}
+        >
             <div className="relative w-auto mx-auto max-w-3xl rounded-md overflow-hidden">
                 <div
                     className={`${

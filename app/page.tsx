@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import NavBar from "@/components/NavBar";
 import Billboard from "@/components/Billboard";
 import VODList from "@/components/VODList";
-import useVODList from "@/hooks/useVODList";
+import useRandomList from "@/hooks/useRandomList";
 import useFavorites from "@/hooks/useFavorites";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModel";
@@ -18,9 +18,10 @@ export default function Home() {
         },
     });
 
-    const { data: vods = [], isLoading } = useVODList();
+    const { data: vods = [], isLoading } = useRandomList();
     const { data: favorites = [] } = useFavorites();
     const { isOpen, closeModal } = useInfoModal();
+    console.log(vods);
 
     if (status === "loading") {
         return (
