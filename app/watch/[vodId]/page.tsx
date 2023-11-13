@@ -36,7 +36,6 @@ export default function Watch({
                 className="h-full w-full"
                 loading="eager"
                 allowFullScreen
-                sandbox="allow-same-origin allow-scripts"
             ></iframe>
             {/* <video
                 controls
@@ -48,7 +47,11 @@ export default function Watch({
             <div className="h-screen w-screen flex flex-col">
                 <div className="flex flex-row items-center justify-center p-3">
                     <div className="w-[38vw] align-center m-0">
-                        <RunePage runes={data?.vod?.runes} />
+                        <RunePage
+                            primaryRunes={data?.vod?.primaryRunes}
+                            secondaryRunes={data?.vod?.secondaryRunes}
+                            adaptativeRunes={data?.vod?.adaptativeRunes}
+                        />
                     </div>
                     <div className="m-0 p-0">{data?.vod?.description}</div>
                 </div>

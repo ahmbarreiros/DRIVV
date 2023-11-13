@@ -1,0 +1,157 @@
+export const runeMapping: { [key: string]: string } = {
+    // DOMINAÇÃO
+    Domination:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754123754152077/domination.png?ex=65651ab6&is=6552a5b6&hm=f90fda17e66aefcd7c8df50f786415ed472f90163db07483c8df92c67518c33d&",
+    Electrocute:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755177900179576/8112.png?ex=65651bb1&is=6552a6b1&hm=5311a290a04a771934f6bf3fa077ac2a55f60b7d9530bfde1bfc0451eef26ca3&",
+    DarkHarvest:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754124240687175/8128.png?ex=65651ab6&is=6552a5b6&hm=f6169aac1b38895090290ac13561891023a5a2ca7c9553fa17d7b8f56ec45a5b&",
+    Predator:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754124492349560/8124.png?ex=65651ab6&is=6552a5b6&hm=a4023d2ec5f7f715f516edf0bdc1afc35e75414ae7ffde55f15ccdd3ce02ea90&",
+    HailOfBlades:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754124018405457/9923.png?ex=65651ab6&is=6552a5b6&hm=da163e692eec98517313df1b5bcbe1115034ac4c509e1ca5209c0893c56f22b3&",
+    SuddenImpact:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754107924852746/8143.png?ex=65651ab2&is=6552a5b2&hm=ac834ce96d9f01a84768e51adce5eb58ca114584ed3a3f7d1a3f51478a17b628&",
+    TasteOfBlood:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754108134563882/8139.png?ex=65651ab2&is=6552a5b2&hm=bfecc28bb83be9ca525666e7ce02699b0e7d6ddb442debefebb223bfdc0c7dcc&",
+    CheapShot:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754106146463856/8126.png?ex=65651ab2&is=6552a5b2&hm=c558c4cb470f4877bbedb5a1e54c498a4ce3d09106d3e41715fd98da9e5e0935&",
+    EyeballCollection:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754107245375700/8138.png?ex=65651ab2&is=6552a5b2&hm=50cff92fb0b76109fcb76c8f8fc9286cbc29e2504c210f8a362bfcd677ca534e&",
+    GhostPoro:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754107446698065/8120.png?ex=65651ab2&is=6552a5b2&hm=81ee21ffc3807bd337b6189add650e4e56f60808202a9e5a916cfd48bc81ee52&",
+    ZombieWard:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754107673186384/8136.png?ex=65651ab2&is=6552a5b2&hm=8cd457be384de7eaa88ccad31eb5b603d07631c9f9a20e25b16cefc7b2095a3d&",
+    UltimateHunter:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754106423283852/8106.png?ex=65651ab2&is=6552a5b2&hm=275ef5b818c82f2489575b79d0fa0050e299b492aa34867176ef039cafe70466&",
+    RelentlessHunter:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754106637201498/8105.png?ex=65651ab2&is=6552a5b2&hm=31e2062881675d394bd613b56e85afeabc8b9560b70d0899d4865090659c9907&",
+    IngeniousHunter:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754106846912702/8134.png?ex=65651ab2&is=6552a5b2&hm=9e1cf021420d5dcb955bf1bf7fdff568915dd38a1e41d7f527ccfff054d7118f&",
+    TreasureHunter:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173754107048235068/8135.png?ex=65651ab2&is=6552a5b2&hm=2a18b74eff3413806e2bd5e21bfb8b849b050158b130af23f1cc615d142a4af0&",
+
+    // DETERMINAÇÃO
+    Determination:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173742310299799612/resolve.png?ex=65650fb5&is=65529ab5&hm=0bbc862b326d5d80c5ee8b754e6b958d44488b7fd34ecd7727e622bd70dd80c2&",
+    Grasp: "https://cdn.discordapp.com/attachments/1093207890686398586/1173745199164444762/8437.png?ex=65651266&is=65529d66&hm=fcede2ba79255907e5ac83057a6b28ec7f7c5bc462c8d93a882368aae4558145&",
+    AfterShock:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745198921162953/8439.png?ex=65651266&is=65529d66&hm=fe70116f39fd63c268af882ad1e64ecc7ee6f192d97642ce061c8bad3cae88d5&",
+    Guardian:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745198661111818/8465.png?ex=65651266&is=65529d66&hm=0e0fafeb2a3f58fff3406f974d2a7caf5978f0c9b217da792a78f591c8ec2685&",
+    Demolish:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745198426247278/8446.png?ex=65651266&is=65529d66&hm=a97266d1aacfee0cc348b98b0a7dd410298c37d2613bdca6259b3925cb9f6e6c&",
+    FontOfLife:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745200296890429/8463.png?ex=65651266&is=65529d66&hm=e8a5978bdcac05eb8b81e96ca2aacb39732a1dd4658784719d4973c33052788b&",
+    ShieldBash:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745200053637180/8401.png?ex=65651266&is=65529d66&hm=e2a577e860d5809f2e367a13f33e41243a84082c01074492af5e3ee8adcf8702&",
+    Conditioning:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745199818743908/8429.png?ex=65651266&is=65529d66&hm=332810e8097e122a4eace64f7d78f3faf16f093fa68324663798d6204731ff40&",
+    SecondWind:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745169577812099/8444.png?ex=6565125f&is=65529d5f&hm=a1c8ef35c258101f17ba3838c89fcd1dbb16405f6fc3aaf26c72c65c44120820&",
+    BonePlating:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745171662381107/8473.png?ex=65651260&is=65529d60&hm=98a7c08a4954137d1ef42aea31ef5749b2551c6dbff0a99861c7b88a845cc1a3&",
+    Overgrowth:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745171427508224/8451.png?ex=6565125f&is=65529d5f&hm=e235ef3059eb91784fa043fa4c098a3ad6f10b1309730b42f8d48d1232ebfe81&",
+    Revitalize:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745171184226324/8453.png?ex=6565125f&is=65529d5f&hm=cf3b2aa34778226c7b7b2cd11faa4b610ca87e6e558355b48f276d05495d9885&",
+    Unflinching:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745170936766484/8242.png?ex=6565125f&is=65529d5f&hm=71e6096b4a8ae7944f57bcb5be8e68a6e5af38c7705be9cf329150f5df982c2b&",
+
+    // FEITICARIA
+    Sorcery:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755355856113665/sorcery.png?ex=65651bdc&is=6552a6dc&hm=caf994c6b15a8e7824c97061c5c6eaf4c957c6d34b6a64334a3b63171734bb39&",
+    PhaseRush:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755339389292574/8230.png?ex=65651bd8&is=6552a6d8&hm=c143e3247c21f62ad6be4ecb9c75d5d209b1829d3db32a1c4438c8e4fc408522&",
+    ArcaneComet:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755356065824808/8229.png?ex=65651bdc&is=6552a6dc&hm=1361bcdad6fe4fa729168d013dd4c50ae37e36b17419b0db16c8606d52ffe554&",
+    Aery: "https://cdn.discordapp.com/attachments/1093207890686398586/1173755355596071113/8214.png?ex=65651bdc&is=6552a6dc&hm=d9412ef291d3acc4827fa9fd5fcc4b73e1d4b0730d2a20dbd293430c0381b30b&",
+    NimbusCloack:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755341310271488/8275.png?ex=65651bd8&is=6552a6d8&hm=a470c2ecd32cea2efbacd293738fcc05aa95e5ebdb014ead0122724d331e0f20&",
+    ManaflowBand:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755341545164911/8226.png?ex=65651bd8&is=6552a6d8&hm=58cc4be68ccfa0514027a439088fc801f4657dd291c0616299c41a14da0c78ae&",
+    Orb: "https://cdn.discordapp.com/attachments/1093207890686398586/1173755341842948126/8224.png?ex=65651bd8&is=6552a6d8&hm=f32c46f69a491e8bbb812eeedb97d4454db436fe8b6ec1821da7f69a2bff313a&",
+    AbsoluteFocus:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755340341391420/8233.png?ex=65651bd8&is=6552a6d8&hm=6c8cb7c975fce1a64549258a8c1f0126bd478dbbb6a842b2b8282b1e7ed04105&",
+    Celerity:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755340643377233/8234.png?ex=65651bd8&is=6552a6d8&hm=510aafdee858bda61320040cb49d0a80c07a0fbb460ae06a2654cb5a053b1456&",
+    Transcendence:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755341092179978/8210.png?ex=65651bd8&is=6552a6d8&hm=62478fead3578f1921aa04761efc12e6f6120ebc8551629155cdb08b72471e1b&",
+    GatheringStorm:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755339645137057/8236.png?ex=65651bd8&is=6552a6d8&hm=8d92cb26676e75053385c341a273dd04214ded4b230549798691733c4deef681&",
+    WaterWalking:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173755339884208159/8232.png?ex=65651bd8&is=6552a6d8&hm=690d2c67072fc4c96aa8888abe378e26432c886901b8fc229f8f5681f9212341&",
+    Scorch: "https://cdn.discordapp.com/attachments/1093207890686398586/1173755340119101500/8237.png?ex=65651bd8&is=6552a6d8&hm=5390b445005f6eaa799a349aa6a99d4432d01a11a2651cb80a3cb545acafdff1&",
+
+    // PRECISÃO
+    Precision:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173748901594017873/precision.png?ex=656515d9&is=6552a0d9&hm=cd49a4f3548a19439a850264b47f0e6ea25435327407805978e74be37b229c48&",
+    PressTheAttack:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173748901350756484/8005.png?ex=656515d9&is=6552a0d9&hm=15af457ac8cd7bfbf5b74af8b5ba8013c73a821c8253cb56bf91d60813cf8188&",
+    LethalTempo:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173748902281883658/8008.png?ex=656515d9&is=6552a0d9&hm=a1c99116dd55c50d93de40a7db60ffc85d1cb5e6cc147c5cd1e0a37121f4e5f7&",
+    FleetFootwork:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173748902021845152/8021.png?ex=656515d9&is=6552a0d9&hm=3252efce6ef402a2c13dff81578b322cfd8ac293241676653ecd282a5f218f8c&",
+    Conqueror:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173748901812125816/8010.png?ex=656515d9&is=6552a0d9&hm=9ac67166cb43f7f14c1471173022be3006795355fc1e5211d126780066651d7d&",
+    Overheal:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745170672533534/9101.png?ex=6565125f&is=65529d5f&hm=395613433bcc69fb2f8a151a2821b5516a059a38c9c414fd31d6cee91a1ac722&",
+    Triumph:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745170462806226/9111.png?ex=6565125f&is=65529d5f&hm=84230a17e0a1c0a78d807a1ef0ae436ca7b6aa9cd26b40f57d572718fa235468&",
+    PresenceOfMind:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745170227929138/8009.png?ex=6565125f&is=65529d5f&hm=65d4163d03e4923150d3adb0c8a44e8c49f8d633b941578c653b4ff0b4fe761f&",
+    Alacrity:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745170026610708/9104.png?ex=6565125f&is=65529d5f&hm=b28d5aee4200b8d78f2ca2cab5c7a01d726955db4cef62b09ebc54b2436808d0&",
+    Tenacity:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745169800106074/9105.png?ex=6565125f&is=65529d5f&hm=bd14818da2fb5862a685b369566ea512a028af83d619e6dfa51d0d1ddf5d1013&",
+    Bloodline:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745121683066890/9103.png?ex=65651254&is=65529d54&hm=6c88f73e8897e74a02297ee06e9350f5c28b376d45a2407edf7174342a9d7694&",
+    CoupDeGrace:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745121418809538/8014.png?ex=65651254&is=65529d54&hm=89918b93035f50e4f8728479b60d5e6a662115662517a4a9eb828337acd9931f&",
+    CutDown:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745121154584686/8017.png?ex=65651254&is=65529d54&hm=7a083e5d4e6aecacbbb312efbde9310bfc9ed7bafc9019ff56f0c9e92b63e5fd&",
+    LastStanding:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745124187050004/8299.png?ex=65651254&is=65529d54&hm=9906b7a41f5f05c8d1d657f0ee080dca17bb6303314ef78262ead237d43e23f3&",
+
+    // INSPIRAÇÃO
+    Inspiration:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752809347371068/inspiration.png?ex=6565197d&is=6552a47d&hm=c20c828e65153ded9f2ad708ee2450c09672c01e8388422d04ab9d4511ce9347&",
+    Glacial:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752810001678407/8351.png?ex=6565197d&is=6552a47d&hm=552a766db89ebf3ab1b522bd657a1c5919543589d8bc382894149e9abb726574&",
+    Spellbook:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752809733230592/8360.png?ex=6565197d&is=6552a47d&hm=5d43269a794471135a8131d1138f403d5e921f1a4409401380b62de91f385a9a&",
+    FirstStrike:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752789764161567/8369.png?ex=65651978&is=6552a478&hm=9317b8b421a3a702f5414c6b6a3070428931cb4e7799114db577a77b6727ec72&",
+    PerfectTiming:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752791534153828/8313.png?ex=65651978&is=6552a478&hm=37c215ca8c2e3591618eca7a95f7aa7f554e50765c1837f32e7cd4abf5a96b6d&",
+    MagicalFootwear:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752791764844685/8304.png?ex=65651978&is=6552a478&hm=653788625ba7433b0d951449e91dba59f3139714e651adb717052527a080b5fa&",
+    Hexflash:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752792066830376/8306.png?ex=65651978&is=6552a478&hm=47c1f9204c65c2d1f0200c448cae6bbd552025d7643dfd52ceb165bd4c9b68f7&",
+    FuturesMarket:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752791282487406/8321.png?ex=65651978&is=6552a478&hm=d884f5cd3a61152524e53d5177ed27a951a1780ec6998121fe81a523f8efe821&",
+    Dematerializer:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752791043424286/8316.png?ex=65651978&is=6552a478&hm=7995111ec4241bf2aa2ee746b0dacf9528bc80fbb3513e2faf57ba71d0a91ffd&",
+
+    Biscuit:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752790783365201/8345.png?ex=65651978&is=6552a478&hm=346bab3e5fe00e83465da4129d13badc9054998a7391fb5a33eb192d61d9c0ea&",
+    Tonic: "https://cdn.discordapp.com/attachments/1093207890686398586/1173752790003224657/8352.png?ex=65651978&is=6552a478&hm=2f4494b21ec6a5890d071e9b6bbd390b4903983170a3e1cfdff905a0aaaef0f4&",
+    ApproachVelocity:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752790288445501/8410.png?ex=65651978&is=6552a478&hm=0c22f87e9b989e010ad7846b0b64cf95bb24931935e7b1acc45bda23cae47bbd&",
+    CosmicInsight:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173752790552690758/8347.png?ex=65651978&is=6552a478&hm=cf82dccc7ae3fabcaa8ec0cfd5a60333ec9b271cf22ded6d94fb6010336bde14&",
+
+    // ADAPATATIVAS
+    AdaptativeDMG:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745123927019520/5008.png?ex=65651254&is=65529d54&hm=a25aaf80f0bac37660696719afc333e22d31a19e8851e43990240e48c0359013&",
+    AdaptativeAS:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745123629211738/5005.png?ex=65651254&is=65529d54&hm=8083c33f0ed85b2295aa735a1f71fb60d8e3cdd1b542c6d2a6b0cd8f073b9db2&",
+    AdaptativeCDR:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745123629211738/5005.png?ex=65651254&is=65529d54&hm=8083c33f0ed85b2295aa735a1f71fb60d8e3cdd1b542c6d2a6b0cd8f073b9db2&",
+    AdaptativeArmor:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745122647756920/5002.png?ex=65651254&is=65529d54&hm=be7d2f6630abbd2cd0a4b1e4f87edc62089c9588eb90183f6fdbff58052b1f3b&",
+    AdaptativeMR:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745122387697807/5003.png?ex=65651254&is=65529d54&hm=7e85e920c4b8e65973f09c1a689d1ee17758c16cf630aa2102b77a71a0f7919d&",
+    AdaptativeHP:
+        "https://cdn.discordapp.com/attachments/1093207890686398586/1173745122031177768/5001.png?ex=65651254&is=65529d54&hm=43ef52d8e4486fe3bc77b44becfb31eb1c8b4f4b118a1ffcbff29461075ece53&",
+};
