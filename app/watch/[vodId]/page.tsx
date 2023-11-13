@@ -4,6 +4,7 @@ import React from "react";
 import useVOD from "@/hooks/useVOD";
 import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
+import RunePage from "@/components/RunePage";
 
 export default function Watch({
     params,
@@ -26,16 +27,38 @@ export default function Watch({
                 />
                 <p className="text-white text-1xl md:text-3xl font-bold select-none">
                     <span className="font-light">Watching: </span>
-                    {data?.vod.title}
+                    {data?.vod?.title}
                 </p>
             </nav>
-            <video
+            <iframe
+                allow="autoplay"
+                src={data?.vod?.videoUrl + "?autoplay=1"}
+                className="h-full w-full"
+                loading="eager"
+                allowFullScreen
+                sandbox="allow-same-origin allow-scripts"
+            ></iframe>
+            {/* <video
                 controls
                 autoPlay
                 muted
                 className="h-full w-full"
                 src={data?.vod.videoUrl}
-            ></video>
+            ></video> */}
+            <div className="h-screen w-screen flex flex-col">
+                <div className="flex flex-row items-center justify-center p-3">
+                    <div className="w-[38vw] align-center m-0">
+                        <RunePage runes={data?.vod?.runes} />
+                    </div>
+                    <div className="m-0 p-0">{data?.vod?.description}</div>
+                </div>
+                <div className="text-white text-xl flex">
+                    {data?.vod?.patch}
+                    {data?.vod?.role}
+                    {data?.vod?.server}
+                    {data?.vod?.champion}
+                </div>
+            </div>
         </div>
     );
 }

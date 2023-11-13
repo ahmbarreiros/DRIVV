@@ -73,4 +73,10 @@ model VOD {
   champion String
   role String
   patch String
+  primaryRunes String[]
+  secondaryRunes String[]
+  adaptativeRunes String[]
+  kda String?
+  elo String?
+  player String?
 }
