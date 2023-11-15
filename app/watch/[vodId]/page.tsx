@@ -56,6 +56,12 @@ export default function Watch({
                     <div className="m-0 p-0">{data?.vod?.description}</div>
                 </div>
                 <div className="text-white text-xl flex">
+                    <img
+                        src={data?.vod?.buildUrl}
+                        className="w-[15vw]"
+                        alt=""
+                    />
+
                     {data?.vod?.patch}
                     {data?.vod?.role}
                     {data?.vod?.server}

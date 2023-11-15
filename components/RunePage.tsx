@@ -26,13 +26,13 @@ const RunePage: React.FC<RunePageProps> = ({
         <div>
             <h1>Runas</h1>
             {transformedPrimary?.map((rune) => (
-                <img src={rune} alt="" />
+                <img width={"48px"} src={rune} alt="" />
             ))}
             {transformedSecondary?.map((rune) => (
-                <img src={rune} alt="" />
+                <img width={"48px"} src={rune} alt="" />
             ))}
             {transformedAdaptative?.map((rune) => (
-                <img src={rune} alt="" />
+                <img width={"32px"} src={rune} alt="" />
             ))}
         </div>
     );

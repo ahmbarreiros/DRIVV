@@ -76,7 +76,10 @@ model VOD {
   primaryRunes String[]
   secondaryRunes String[]
   adaptativeRunes String[]
+  sumonnerSpells String[]
+  skillOrder String[]
   kda String?
   elo String?
   player String?
+  buildUrl String?
 }
