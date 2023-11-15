@@ -23,8 +23,8 @@ const RunePage: React.FC<RunePageProps> = ({
     );
 
     return (
-        <div>
-            <h1>Runas</h1>
+        <div className="flex flex-columns">
+            <div></div>
             {transformedPrimary?.map((rune) => (
                 <img width={"48px"} src={rune} alt="" />
             ))}

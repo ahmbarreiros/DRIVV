@@ -16,19 +16,18 @@ const Billboard = () => {
         <div className="relative h-[56.25vw]">
             {/* For future videos} */}
             <div className="relative inline-block w-full h-full text-white after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-t after:from-zinc-900 after:to-transparent">
-                <video
-                    className="w-full h-[56.25vw] object-cover  brightness-[60%] transition duration-300"
-                    poster={data?.value?.thumbnailUrl}
-                    src={data?.value?.videoUrl}
-                    autoPlay
-                    muted
-                    loop
-                ></video>
-                {/* <img
+                {/* <iframe
+                    allow="autoplay"
+                    src={data?.vod?.videoUrl + "?autoplay=1"}
+                    className="h-full w-full"
+                    loading="eager"
+                    allowFullScreen
+                ></iframe> */}
+                <img
                     className="-z-1 relative block w-full h-[56.25vw] object-cover  brightness-[60%] transition duration-300"
                     src={data?.value.thumbnailUrl}
                     alt=""
-                /> */}
+                />
             </div>
             <div className="absolute top-[30%] md:top-[40%] ml-4 md:ml-16">
                 <p className="text-white text-1xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl">
