@@ -23,17 +23,22 @@ const RunePage: React.FC<RunePageProps> = ({
     );
 
     return (
-        <div className="flex flex-columns">
-            <div></div>
-            {transformedPrimary?.map((rune) => (
-                <img width={"48px"} src={rune} alt="" />
-            ))}
-            {transformedSecondary?.map((rune) => (
-                <img width={"48px"} src={rune} alt="" />
-            ))}
-            {transformedAdaptative?.map((rune) => (
-                <img width={"32px"} src={rune} alt="" />
-            ))}
+        <div className="flex flex-col">
+            <div className="flex flex-row">
+                {transformedPrimary?.map((rune) => (
+                    <img width={"64px"} src={rune} alt="" />
+                ))}
+            </div>
+            <div className="flex flex-row">
+                {transformedSecondary?.map((rune) => (
+                    <img width={"48px"} src={rune} alt="" />
+                ))}
+            </div>
+            <div className="flex flex-row">
+                {transformedAdaptative?.map((rune) => (
+                    <img width={"32px"} className="" src={rune} alt="" />
+                ))}
+            </div>
         </div>
     );
 };
