@@ -5,6 +5,7 @@ import useVOD from "@/hooks/useVOD";
 import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 import RunePage from "@/components/RunePage";
+import SpellsPage from "@/components/SpellsPage";
 
 export default function Watch({
     params,
@@ -45,7 +46,7 @@ export default function Watch({
                 src={data?.vod.videoUrl}
             ></video> */}
             <div className="h-screen w-screen flex flex-col">
-                <div className="text-white text-sm flex pr-10 m-3 justify-end">
+                <div className="text-white text-sm flex pr-10 m-3 justify-end z-10">
                     <p className="p-3">{data?.vod?.patch} </p>
                     <p className="p-3">{data?.vod?.role} </p>
                     <p className="p-3">{data?.vod?.server} </p>
@@ -66,6 +67,7 @@ export default function Watch({
                             adaptativeRunes={data?.vod?.adaptativeRunes}
                         />
                     </div>
+                    <SpellsPage summonerSpells={data?.vod?.summonerSpells} />
                 </div>
             </div>
         </div>
