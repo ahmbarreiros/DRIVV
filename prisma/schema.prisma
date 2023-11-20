@@ -79,5 +79,6 @@ model VOD {
   adaptativeRunes String[]
   sumonnerSpells String[]
   elo String?
-  player String?
+  player String
+  result String
 }

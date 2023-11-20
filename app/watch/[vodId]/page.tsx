@@ -52,12 +52,13 @@ export default function Watch({
                     <p className="p-3">{data?.vod?.server} </p>
                     <p className="p-3">{data?.vod?.champion}</p>
                     <p className="p-3">{data?.vod?.elo}</p>
+                    <p className="p-3">{data?.vod?.result}</p>
                 </div>
                 <div className="flex flex-col items-center justify-center p-3">
                     <div className="pb-5 text-center">
                         <h1 className="text-white text-6xl">Matchup Guide</h1>
                         <p className="text-white text-md">
-                            {data?.vod?.description}
+                            {data?.vod?.keypointsGuide}
                         </p>
                     </div>
                     <div className="w-[38vw] align-center justify-center">

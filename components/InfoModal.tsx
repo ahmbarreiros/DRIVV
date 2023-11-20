@@ -101,7 +101,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                         </p>
 
                         <p className="text-white text-lg">
-                            {data?.vod?.description}
+                            {data?.vod?.keypointsGuide}
                         </p>
                         <div className="flex flex-row items-center gap-2 text-sm">
                             <p className="text-white text-sm">
@@ -115,6 +115,15 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                             </p>
                             <p className="text-white text-sm">
                                 {data?.vod?.patch}
+                            </p>
+                            <p className="text-white text-sm">
+                                {data?.vod?.player}
+                            </p>
+                            <p className="text-white text-sm">
+                                {data?.vod?.elo}
+                            </p>
+                            <p className="text-white text-sm">
+                                {data?.vod?.result}
                             </p>
                         </div>
                     </div>

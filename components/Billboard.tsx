@@ -34,11 +34,13 @@ const Billboard = () => {
                     {data?.value?.title}
                 </p>
                 <p className="text-white text-[8px] md:text-lg h-full mt-3 md:mt-8 w-[90%] md:w-[80%] lg:w-[50%] drop-shadow-xl">
-                    {data?.value?.description}
+                    {data?.value?.keypointsGuide}
                 </p>
                 <p className="text-white text-[8px] md:text-[14px] h-full mt-3 md:mt-8 w-[90%] md:w-[80%] lg:w-[50%] drop-shadow-xl">
                     {data?.value?.champion} {data?.value?.role}{" "}
-                    {data?.value?.server} {data?.value?.patch}
+                    {data?.value?.server} {data?.value?.patch}{" "}
+                    {data?.value?.result} {data?.value?.player}{" "}
+                    {data?.value?.elo}
                 </p>
                 <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
                     <PlayButton
