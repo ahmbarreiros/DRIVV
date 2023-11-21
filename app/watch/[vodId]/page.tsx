@@ -57,8 +57,15 @@ export default function Watch({
                 <div className="flex flex-col items-center justify-center p-3">
                     <div className="pb-5 text-center">
                         <h1 className="text-white text-6xl">Matchup Guide</h1>
+                        <h2 className="text-white text-6xl">Resumo</h2>
                         <p className="text-white text-md">
                             {data?.vod?.keypointsGuide}
+                        </p>
+                        <h2 className="text-white text-6xl">
+                            Análise Detalhada
+                        </h2>
+                        <p className="text-white text-md">
+                            {data?.vod?.indepthGuide}
                         </p>
                     </div>
                     <div className="w-[38vw] align-center justify-center">
