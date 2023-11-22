@@ -27,13 +27,17 @@ export default function Watch({
                     size={35}
                 />
                 <p className="text-white text-1xl md:text-3xl font-bold select-none">
-                    <span className="font-light">Watching: </span>
+                    <span className="font-light">Assistindo: </span>
                     {data?.vod?.title}
                 </p>
             </nav>
             <iframe
                 allow="autoplay"
-                src={data?.vod?.videoUrl + "?autoplay=1"}
+                src={
+                    "https://www.youtube.com/embed/" +
+                    data?.vod?.videoUrl +
+                    "?autoplay=1"
+                }
                 className="h-full w-full"
                 loading="eager"
                 allowFullScreen
@@ -56,7 +60,7 @@ export default function Watch({
                 </div>
                 <div className="flex flex-col items-center justify-center p-3">
                     <div className="pb-5 text-center">
-                        <h1 className="text-white text-6xl">Matchup Guide</h1>
+                        <h1 className="text-white text-6xl">Guia da Matchup</h1>
                         <h2 className="text-white text-6xl">Resumo</h2>
                         <p className="text-white text-md">
                             {data?.vod?.keypointsGuide}

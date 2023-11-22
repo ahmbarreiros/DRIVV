@@ -92,16 +92,10 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                     <div className="px-12 py-8">
                         <div className="flex flex-row items-center gap-2 text-lg">
                             <BsFillCalendarCheckFill className="text-green-400" />
-                            <p className="text-white font-semibold">
-                                Recently Added
-                            </p>
+                            <p className="text-white font-semibold">Recente</p>
                         </div>
                         <p className="text-white text-lg">
                             {data?.vod?.duration}
-                        </p>
-
-                        <p className="text-white text-lg">
-                            {data?.vod?.keypointsGuide}
                         </p>
                         <div className="flex flex-row items-center gap-2 text-sm">
                             <p className="text-white text-sm">
