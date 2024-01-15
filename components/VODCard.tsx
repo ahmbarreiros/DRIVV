@@ -40,7 +40,7 @@ const VODCard: React.FC<VODCardProps> = ({ data }) => {
                     <div className="flex flex-row items-center gap-3">
                         <div
                             onClick={() => router.push(`/watch/${data?.id}`)}
-                            className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-zinc border-2 border-white text-white rounded-full flex justify-center items-center transition hover:bg-neutral-300 hover:text-[#6f24a6]"
+                            className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-zinc border-2 border-white text-white rounded-full flex justify-center items-center transition hover:bg-neutral-300 hover:text-[#80320e]"
                         >
                             <BsFillPlayFill size={20} />
                         </div>

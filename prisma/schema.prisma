@@ -65,8 +65,6 @@ model VerificationToken {
 model VOD {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   title String
-  indepthGuide String
-  keypointsGuide String
   videoUrl String
   thumbnailUrl String
   server String
@@ -74,10 +72,6 @@ model VOD {
   champion String
   role String
   patch String
-  primaryRunes String[]
-  secondaryRunes String[]
-  adaptativeRunes String[]
-  sumonnerSpells String[]
   elo String?
   player String
   result String

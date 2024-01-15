@@ -9,6 +9,7 @@ import useRandomList from "@/hooks/useRandomList";
 import useFavorites from "@/hooks/useFavorites";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModel";
+import useRoleList from "@/hooks/useRoleList";
 
 export default function Home() {
     const { data: session, status } = useSession({
@@ -21,7 +22,10 @@ export default function Home() {
     const { data: vods = [], isLoading } = useRandomList();
     const { data: favorites = [] } = useFavorites();
     const { isOpen, closeModal } = useInfoModal();
-    console.log(vods);
+    const { data: top = [] } = useRoleList("Top");
+    const { data: jg = [] } = useRoleList("Jungle");
+    const { data: mid = [] } = useRoleList("Mid");
+    const { data: bot = [] } = useRoleList("Bot");
 
     if (status === "loading") {
         return (
@@ -39,15 +43,15 @@ export default function Home() {
             <NavBar />
             <Billboard />
             <div
-                className="pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#3b1159]"
+                className="pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#80320e]"
                 id="vods-container"
             >
                 <VODList title="My Library" data={favorites.favoriteVODs} />
                 <VODList title="VODs" data={vods.vods} />
-                <VODList title="Top" data={vods.vods} />
-                <VODList title="Jungle" data={vods.vods} />
-                <VODList title="Mid" data={vods.vods} />
-                <VODList title="Bot" data={vods.vods} />
+                <VODList title="Top" data={top.vods} />
+                <VODList title="Jungle" data={jg.vods} />
+                <VODList title="Mid" data={mid.vods} />
+                <VODList title="Bot" data={bot.vods} />
             </div>
         </main>
     );

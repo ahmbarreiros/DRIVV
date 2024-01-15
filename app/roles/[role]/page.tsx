@@ -30,7 +30,7 @@ const Roles = ({
             <InfoModal visible={isOpen} onClose={closeModal} />
             <NavBar />
             <div
-                className="relative pt-40 pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#3b1159] h-full"
+                className="relative pt-40 pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#80320e] h-[100vh]"
                 id="vods-container"
             >
                 {length != 0 ? (
