@@ -43,7 +43,7 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ vodId }) => {
     return (
         <div
             onClick={toggleFavorites}
-            className="cursor-pointer group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 hover:bg-neutral-300  rounded-full flex items-center justify-center transition duration hover:border-neutral-300"
+            className="cursor-pointer group/item w-6 h-6 lg:w-10 lg:h-10 border-white bg-gray border-2 bg-neutral-100  rounded-full flex items-center justify-center transition duration hover:border-neutral-300"
         >
             <Icon className="text-red-500 w-2.5" />
         </div>

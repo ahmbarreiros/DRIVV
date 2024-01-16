@@ -15,7 +15,7 @@ export async function GET(
     }
 ) {
     try {
-        await serverAuth(req);
+        // await serverAuth(req);
         const champion = params?.champion;
 
         if (typeof champion !== "string") {

@@ -46,7 +46,7 @@ export default function Watch({
                 allow="autoplay"
                 src={
                     "https://www.youtube.com/embed/" +
-                    data?.vod?.videoUrl +
+                    data?.vod?.URL +
                     "?autoplay=1"
                 }
                 className="h-full w-full"

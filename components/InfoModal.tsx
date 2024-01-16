@@ -55,7 +55,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
             className="z-50 transition duration-300 bg-black/80 flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0"
             ref={componentRef}
         >
-            <div className="relative w-auto mx-auto max-w-3xl rounded-md overflow-hidden">
+            <div className="relative mx-2 md:mx-0 w-[100vw] mx-auto max-w-3xl rounded-md overflow-hidden">
                 <div
                     className={`${
                         isVisible ? "scale-100" : "scale-0"
@@ -63,8 +63,12 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                 >
                     <div className="relative h-96">
                         <video
-                            src={data?.vod?.videoUrl}
-                            poster={data?.vod?.thumbnailUrl}
+                            src={data?.vod?.URL}
+                            poster={
+                                "https://i.ytimg.com/vi/" +
+                                data?.vod?.URL +
+                                "/maxresdefault.jpg"
+                            }
                             autoPlay
                             muted
                             loop

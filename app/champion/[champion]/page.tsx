@@ -30,7 +30,7 @@ const Champion = ({
             <InfoModal visible={isOpen} onClose={closeModal} />
             <NavBar />
             <div
-                className="relative pt-40 pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#3b1159] h-[58vw]"
+                className="relative lg:pt-40 pt-20 pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#80320e] h-[100vh]"
                 id="vods-container"
             >
                 {length != 0 ? (
@@ -39,7 +39,7 @@ const Champion = ({
                         data={vods?.vods}
                     />
                 ) : (
-                    <h1 className="text-white text-xl text-center h-[58vh] overflow-y-hidden">
+                    <h1 className="text-white text-xl text-center h-[100vh] overflow-y-hidden">
                         Nothing to see here yet...
                     </h1>
                 )}

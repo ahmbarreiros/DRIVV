@@ -14,7 +14,7 @@ export async function GET(
     }
 ) {
     try {
-        await serverAuth(req);
+        // await serverAuth(req);
         const vodId = params?.vodId;
 
         if (typeof vodId !== "string") {

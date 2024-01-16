@@ -14,7 +14,7 @@ export async function GET(
     }
 ) {
     try {
-        await serverAuth(req);
+        // await serverAuth(req);
         const role = params?.role;
 
         if (typeof role !== "string") {

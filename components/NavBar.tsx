@@ -3,6 +3,8 @@ import MobileMenu from "./MobileMenu";
 import NavBarItem from "./NavBarItem";
 import { BsChevronDown, BsSearch, BsBell } from "react-icons/bs";
 import AccountMenu from "./AccountMenu";
+import SearchBar from "./SearchBar";
+import SearchResultsList from "./SearchResultsList";
 
 const TOP_OFFSET = 66;
 
@@ -10,6 +12,7 @@ const NavBar = () => {
     const [brosweVisibility, setBrowseVisibility] = useState(false);
     const [accountVisibility, setAccountVisibility] = useState(false);
     const [backgroundVisibility, setBackgroundVisibility] = useState(false);
+    const [results, setResults] = useState([]);
     const componentRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -48,7 +51,7 @@ const NavBar = () => {
     return (
         <nav className="w-full fixed z-40 select-none" ref={componentRef}>
             <div
-                className={`px-4 md:px-16 py-2 flex flex-row items-center transition duration-500 ${
+                className={`px-4 md:px-15 py-2 flex flex-row items-center transition duration-500 ${
                     backgroundVisibility ? "bg-zinc-900/90" : ""
                 }`}
             >
@@ -64,7 +67,7 @@ const NavBar = () => {
                     <NavBarItem label="Jungle" redirection="/roles/Jungle" />
                     <NavBarItem label="Mid" redirection="/roles/Mid" />
                     <NavBarItem label="Bot" redirection="/roles/Bot" />
-                    <NavBarItem label="Meus favoritos" />
+                    <NavBarItem label="Support" redirection="/roles/Support" />
                 </div>
                 <div
                     // TODO(alb): maybe set this differently if necessary.
@@ -80,8 +83,14 @@ const NavBar = () => {
                     <MobileMenu visible={brosweVisibility} />
                 </div>
                 <div className="flex flex-row ml-auto gap-7 items-center">
-                    <div className="flex items-center gap-1 text-gray-200 hover:text-gray-300 cursor-pointer transition">
-                        <BsSearch className="h-5 w-5" />
+                    <div className="flex items-center gap-1 text-gray-200 cursor-pointer transition">
+                        <div className="search-bar-container flex flex-col col items-center justify-center">
+                            <SearchBar setResults={setResults} />
+                            <SearchResultsList results={results} />
+                        </div>
+                        <button>
+                            <BsSearch className="h-5 w-5" />
+                        </button>
                     </div>
                     <div
                         // TODO(alb): maybe set this differently if necessary.

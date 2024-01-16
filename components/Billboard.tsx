@@ -15,27 +15,32 @@ const Billboard = () => {
     return (
         <div className="relative h-[56.25vw]">
             {/* For future videos} */}
-            <div className="relative inline-block w-full h-full text-white after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-t after:from-zinc-900 after:to-transparent">
+            <div className="relative inline-block w-full h-full text-white after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-t after:from-zinc-900 after:to-transparent pt-0">
                 {/* <iframe
                     allow="autoplay"
-                    src={data?.vod?.videoUrl + "?autoplay=1"}
+                    src={data?.vod?.URL + "?autoplay=1"}
                     className="h-full w-full"
                     loading="eager"
                     allowFullScreen
                 ></iframe> */}
                 <img
                     className="-z-1 relative block w-full h-[56.25vw] object-cover  brightness-[60%] transition duration-300"
-                    src={data?.value?.thumbnailUrl}
+                    src={
+                        "https://i.ytimg.com/vi/" +
+                        data?.value?.URL +
+                        "/maxresdefault.jpg"
+                    }
                     alt=""
                 />
             </div>
             <div className="absolute top-[30%] md:top-[40%] ml-4 md:ml-16">
-                <p className="text-white text-1xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl">
+                <p className="text-white text-1xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold sm:text-4xl drop-shadow-xl">
                     {data?.value?.title}
                 </p>
-                <p className="text-white text-[8px] md:text-[14px] h-full mt-3 md:mt-8 w-[90%] md:w-[80%] lg:w-[50%] drop-shadow-xl">
+                <p className="text-white text-[8px] md:text-[14px] h-full mt-3 md:mt-8 w-[90%] md:w-[80%] lg:w-[50%] sm:text-[14px] drop-shadow-xl">
                     {data?.value?.champion} {data?.value?.role}{" "}
                     {data?.value?.server} {data?.value?.patch}{" "}
+                    {data?.value?.result}
                 </p>
                 <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
                     <PlayButton

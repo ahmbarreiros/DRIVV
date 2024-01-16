@@ -16,7 +16,7 @@ const PlayButton: React.FC<PlayButtonProps> = ({ vodId, className }) => {
             }}
             className={`${className}`}
         >
-            <BsFillPlayFill size={25} className="" />
+            <BsFillPlayFill className="w-30" />
         </button>
     );
 };

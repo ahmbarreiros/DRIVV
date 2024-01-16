@@ -65,8 +65,7 @@ model VerificationToken {
 model VOD {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   title String
-  videoUrl String
-  thumbnailUrl String
+  URL String
   server String
   duration String
   champion String
