@@ -14,16 +14,31 @@ const Champion = ({
 }) => {
     const { isOpen, closeModal } = useInfoModal();
     const champion = params?.champion;
-    console.log(champion);
 
-    const { data: vods, isLoading } = useChampionList(champion);
-    console.log(vods);
+    const { data: vods = [], isLoading } = useChampionList(champion);
     if (isLoading) {
-        return <h1>Waiting...</h1>;
+        return (
+            <main>
+                <InfoModal visible={isOpen} onClose={closeModal} />
+                <NavBar />
+                <div
+                    className="relative lg:pt-40 pt-20 pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#80320e] h-[100vh]"
+                    id="vods-container select-none"
+                >
+                    (
+                    <VODList
+                        title="Loading..."
+                        data={vods?.vods}
+                        isLoading={isLoading}
+                    />
+                    )
+                </div>
+            </main>
+        );
     }
     console.log(vods);
     const length = vods.vods.length;
-    console.log(length == 0);
+    vods.vods = vods.vods.slice(0, 20);
 
     return (
         <main>

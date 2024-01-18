@@ -7,12 +7,29 @@ const SearchBar = ({ setResults }: any) => {
     if (!isLoading) {
     }
     const fetchData = (value: any) => {
-        const results = vods.vods.filter((vod: any) => {
+        const results = vods?.vods?.filter((vod: any) => {
+            value = value.trim();
+            const splittedValues = value.split(" ");
+            const valuesMatched = new Set();
             return (
                 value &&
                 vod &&
                 vod.title &&
-                vod.champion.toLowerCase().includes(value)
+                vod.champion &&
+                (vod.title.toLowerCase().includes(value) ||
+                    splittedValues.every((value: any) => {
+                        if (
+                            !valuesMatched.has(value) &&
+                            vod.title.toLowerCase().includes(value)
+                        ) {
+                            valuesMatched.add(value);
+                            return true;
+                        }
+                        return false;
+                    })) &&
+                splittedValues[0]
+                    .toLowerCase()
+                    .includes(vod.champion.toLowerCase())
             );
         });
         setResults(results);

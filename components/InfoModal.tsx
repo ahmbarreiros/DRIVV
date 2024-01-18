@@ -2,7 +2,6 @@ import React, { useCallback, useState, useEffect, useRef } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsFillCalendarCheckFill } from "react-icons/bs";
 import PlayButton from "@/components/PlayButton";
-import FavoriteButton from "@/components/FavoriteButton";
 import useInfoModal from "@/hooks/useInfoModel";
 import useVOD from "@/hooks/useVOD";
 
@@ -14,9 +13,46 @@ interface InfoModalProps {
 const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
     const [isVisible, setIsVisible] = useState(!!visible);
     const { vodId } = useInfoModal();
-    const { data = {} } = useVOD(vodId);
+    const { data = {}, isLoading } = useVOD(vodId);
     const componentRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        setIsVisible(!!visible);
+    }, [visible]);
+
+    const handleClose = useCallback(() => {
+        setIsVisible(false);
+        setTimeout(() => {
+            onClose();
+        }, 500);
+    }, [onClose]);
+
+    if (isLoading) {
+        return (
+            <div
+                className="z-50 transition duration-300 bg-black/80 flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0"
+                ref={componentRef}
+            >
+                <div className="relative mx-2 md:mx-0 w-[100vw] mx-auto max-w-3xl rounded-md overflow-hidden">
+                    <div
+                        className={`${
+                            isVisible ? "scale-100" : "scale-0"
+                        } transform duration-300 relative flex-auto bg-zinc-900 drop-shadow-md w-full h-full animate-pulse bg-gradient-to-t from-zinc-100 to-zinc-800`}
+                    >
+                        <div className="relative h-96">
+                            <div className="w-full brightness-[40%] object-cover h-full"></div>
+                            <div
+                                onClick={handleClose}
+                                className="cursor-pointer absolute top-3 right-3 h-10 w-10 rounded-full bg-black/70 flex items-center justify-center"
+                            >
+                                <AiOutlineClose className="text-white w-6 h-6 hover:w-7 hover:h-7" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
     // useEffect(() => {
     //     const handleClickOutside = (event: any) => {
     //         if (
@@ -34,18 +70,6 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
     //         window.removeEventListener("click", handleClickOutside);
     //     };
     // }, []);
-
-    useEffect(() => {
-        setIsVisible(!!visible);
-    }, [visible]);
-
-    const handleClose = useCallback(() => {
-        setIsVisible(false);
-        setTimeout(() => {
-            onClose();
-        }, 500);
-    }, [onClose]);
-
     if (!visible) {
         return null;
     }
@@ -89,7 +113,6 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                                     {" "}
                                     <PlayButton vodId={data?.vod?.id} />{" "}
                                 </div>
-                                <FavoriteButton vodId={data?.vod?.id} />
                             </div>
                         </div>
                     </div>

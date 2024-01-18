@@ -3,7 +3,12 @@ import { FaLocationArrow } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
 const SearchResultsList = ({ results }: any) => {
+    if (!results) {
+        return null;
+    }
     const router = useRouter();
+    console.log(results);
+    results = results.slice(0, 4);
     console.log(results);
 
     return (

@@ -1,7 +1,5 @@
 import React, { useCallback } from "react";
 import { BsFillPlayFill, BsFillCalendarCheckFill } from "react-icons/bs";
-import { GrScheduleNew } from "react-icons/gr";
-import FavoriteButton from "./FavoriteButton";
 import { useRouter } from "next/navigation";
 import useInfoModal from "@/hooks/useInfoModel";
 import { AiOutlineInfoCircle } from "react-icons/ai";
@@ -47,7 +45,6 @@ const VODCard: React.FC<VODCardProps> = ({ data }) => {
                         >
                             <BsFillPlayFill size={20} />
                         </div>
-                        <FavoriteButton vodId={data.id} />
                         <div
                             onClick={handleOpenModal}
                             className=" text-white cursor-pointer ml-auto w-6 h-6 lg:w-10 lg:h-10 rounded-full flex justify-center items-center transition hover:text-neutral-300"

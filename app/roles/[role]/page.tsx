@@ -14,16 +14,32 @@ const Roles = ({
 }) => {
     const { isOpen, closeModal } = useInfoModal();
     const role = params?.role;
-    console.log(role);
 
-    const { data: vods, isLoading } = useRoleList(role);
-    console.log(vods);
+    const { data: vods = [], isLoading } = useRoleList(role);
     if (isLoading) {
-        return <h1>Waiting...</h1>;
+        return (
+            <main>
+                <InfoModal visible={isOpen} onClose={closeModal} />
+                <NavBar />
+                <div
+                    className="relative lg:pt-40 pt-20 lg:pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#80320e] h-[100vh]"
+                    id="vods-container select-none"
+                >
+                    (
+                    <VODList
+                        title="Loading..."
+                        data={vods?.vods}
+                        isLoading={isLoading}
+                    />
+                    )
+                </div>
+            </main>
+        );
     }
-    console.log(vods);
+    console.log(vods?.vods);
     const length = vods.vods.length;
-    console.log(length == 0);
+    vods.vods = vods?.vods.slice(0, 20);
+    console.log(vods?.vods);
 
     return (
         <main>

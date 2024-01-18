@@ -5,12 +5,21 @@ import PlayButton from "./PlayButton";
 import useInfoModal from "@/hooks/useInfoModel";
 
 const Billboard = () => {
-    const { data } = useBillboard();
+    const { data, isLoading } = useBillboard();
 
     const { openModal } = useInfoModal();
     const handleOpenModal = useCallback(() => {
         openModal(data?.value?.id);
     }, [openModal, data?.value?.id]);
+
+    if (isLoading) {
+        return (
+            <div className="relative h-[56.25vw]">
+                {/* For future videos} */}
+                <div className="relative inline-block w-full h-full after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-t after:from-zinc-900 after:to-transparent pt-0 animate-pulse bg-gradient-to-t from-zinc-100 to-zinc-800"></div>
+            </div>
+        );
+    }
 
     return (
         <div className="relative h-[56.25vw]">

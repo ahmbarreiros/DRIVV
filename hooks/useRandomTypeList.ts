@@ -1,9 +1,9 @@
 import useSWR from "swr";
 import fetcher from "@/lib/fetcher";
 
-const useFavorites = () => {
-    const { data, error, isLoading, mutate } = useSWR(
-        "/api/favorites",
+const useRandomTypeList = (type?: string) => {
+    const { data, error, isLoading } = useSWR(
+        type ? `/api/random/randomFour/${type}` : null,
         fetcher,
         {
             revalidateIfStale: false,
@@ -11,12 +11,10 @@ const useFavorites = () => {
             revalidateOnReconnect: false,
         }
     );
-
     return {
         data,
         error,
         isLoading,
-        mutate,
     };
 };
-export default useFavorites;
+export default useRandomTypeList;
