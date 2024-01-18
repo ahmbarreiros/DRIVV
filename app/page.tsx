@@ -15,6 +15,7 @@ export default function Home() {
     const { data: mid = [] } = useRandomTypeList("Mid");
     const { data: bot = [] } = useRandomTypeList("Bot");
     const { data: support = [] } = useRandomTypeList("Support");
+    console.log(top, jg, mid, bot, support);
 
     return (
         <main className="select-none">
@@ -22,7 +23,7 @@ export default function Home() {
             <NavBar />
             <Billboard />
             <div
-                className="lg:pt-10 lg:pb-40 h-[100vh] bg-gradient-to-br from-zinc-900 from-60% to-[#80320e]"
+                className="lg:pt-10 lg:pb-40 h-auto min-h-[100vh] bg-gradient-to-br from-zinc-900 from-60% to-[#80320e]"
                 id="vods-container"
             >
                 <VODList title="VODs" data={vods.vods} isLoading={isLoading} />

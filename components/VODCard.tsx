@@ -52,10 +52,6 @@ const VODCard: React.FC<VODCardProps> = ({ data }) => {
                             <AiOutlineInfoCircle size={20} />
                         </div>
                     </div>
-                    <div className="flex flex-row  mt-4 items-center">
-                        <BsFillCalendarCheckFill className="text-green-400 mr-2" />
-                        <p className="text-white font-semibold">Recente</p>
-                    </div>
                     <div className="flex flex-row  mt-4 gap-2 items-center">
                         <p className="text-white text-[10px] lg:text-sm">
                             {data.duration}

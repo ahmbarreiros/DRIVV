@@ -22,7 +22,7 @@ const Champion = ({
                 <InfoModal visible={isOpen} onClose={closeModal} />
                 <NavBar />
                 <div
-                    className="relative lg:pt-40 pt-20 pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#80320e] h-[100vh]"
+                    className="relative lg:pt-40 pt-20 pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#80320e] h-auto min-h-[100vh]"
                     id="vods-container select-none"
                 >
                     (
@@ -45,7 +45,7 @@ const Champion = ({
             <InfoModal visible={isOpen} onClose={closeModal} />
             <NavBar />
             <div
-                className="relative lg:pt-40 pt-20 pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#80320e] h-[100vh]"
+                className="relative lg:pt-40 pt-20 pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#80320e] h-auto min-h-[100vh]"
                 id="vods-container"
             >
                 {length != 0 ? (

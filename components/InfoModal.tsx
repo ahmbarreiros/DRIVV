@@ -37,7 +37,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                     <div
                         className={`${
                             isVisible ? "scale-100" : "scale-0"
-                        } transform duration-300 relative flex-auto bg-zinc-900 drop-shadow-md w-full h-full animate-pulse bg-gradient-to-t from-zinc-100 to-zinc-800`}
+                        } transform duration-300 relative flex-auto bg-zinc-900 drop-shadow-md w-full h-full animate-pulse bg-gradient-to-tr from-zinc-800 to-zinc-900`}
                     >
                         <div className="relative h-96">
                             <div className="w-full brightness-[40%] object-cover h-full"></div>

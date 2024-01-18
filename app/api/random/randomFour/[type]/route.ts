@@ -13,25 +13,25 @@ export async function GET(
 ) {
     try {
         const type = params?.type;
-        console.log(type);
 
         if (type && typeof type !== "string") {
             throw new Error("Invalid type");
         }
-        const vodCount = await prismadb.vOD.count();
-        const randomIndex = Math.floor((Math.random() * vodCount) / 2);
         if (!type) {
             throw new Error("Invalid type");
         } else {
-            const randomVods = await prismadb.vOD.findMany({
+            const allVods = await prismadb.vOD.findMany({
                 where: {
                     OR: [{ champion: type }, { role: type }],
                 },
-                take: 4,
-                skip: randomIndex,
                 distinct: ["id"],
             });
-            return NextResponse.json({ vods: randomVods, status: 200 });
+            const shuffledVods = allVods.sort(() => Math.random() - 0.5);
+            const randomVods = shuffledVods.slice(0, 4);
+            return NextResponse.json({
+                vods: randomVods,
+                status: 200,
+            });
         }
     } catch (error) {
         console.log(error);

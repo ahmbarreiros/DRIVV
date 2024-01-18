@@ -26,7 +26,7 @@ export default function Watch({
                         size={35}
                     />
                     <p className="text-white text-1xl md:text-3xl font-bold select-none">
-                        <span className="font-light">Assistindo: </span>
+                        <span className="font-light">Watching: </span>
                         {data?.vod?.title}
                     </p>
                 </div>

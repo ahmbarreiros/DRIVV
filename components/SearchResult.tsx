@@ -28,6 +28,7 @@ const SearchResult = ({ result }: any) => {
                 <h4 className="text-md">{result.title}</h4>
                 <div className="flex flex-row gap-1 text-sm">
                     <p>{result.champion}</p>
+                    <p>{result.role}</p>
                     <p>{result.result}</p>
                     <p>{result.duration}</p>
                 </div>

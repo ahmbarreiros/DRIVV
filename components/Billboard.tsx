@@ -16,7 +16,7 @@ const Billboard = () => {
         return (
             <div className="relative h-[56.25vw]">
                 {/* For future videos} */}
-                <div className="relative inline-block w-full h-full after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-t after:from-zinc-900 after:to-transparent pt-0 animate-pulse bg-gradient-to-t from-zinc-100 to-zinc-800"></div>
+                <div className="relative inline-block w-full h-full after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-t after:from-zinc-900 after:to-transparent pt-0 animate-pulse bg-gradient-to-t from-zinc-700 to-zinc-800"></div>
             </div>
         );
     }
@@ -61,7 +61,7 @@ const Billboard = () => {
                         className="bg-[#80320e]/30 border-2 border-[#FFFFFF1A] text-white rounded-md py-1 md:py-2 px-2 md:px-4 w-auto text-xs lg:text-lg font-semibold flex flex-row items-center hover:bg-opacity-20 hover:border-2 hover:border-[#80320e]  transition"
                     >
                         <AiOutlineInfoCircle className="mr-1" />
-                        Sobre
+                        More
                     </button>
                 </div>
             </div>

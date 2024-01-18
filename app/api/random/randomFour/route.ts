@@ -3,15 +3,11 @@ import { NextResponse } from "next/server";
 
 export async function GET(req: Request) {
     try {
-        const vodCount = await prismadb.vOD.count();
-        console.log(vodCount);
-
-        const randomIndex = Math.floor((Math.random() * vodCount) / 2);
-        const randomVods = await prismadb.vOD.findMany({
-            take: 4,
-            skip: randomIndex,
+        const allVods = await prismadb.vOD.findMany({
             distinct: ["id"],
         });
+        const shuffledVods = allVods.sort(() => Math.random() - 0.5);
+        const randomVods = shuffledVods.slice(0, 4);
 
         return NextResponse.json({
             vods: randomVods,

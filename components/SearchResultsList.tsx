@@ -7,12 +7,10 @@ const SearchResultsList = ({ results }: any) => {
         return null;
     }
     const router = useRouter();
-    console.log(results);
-    results = results.slice(0, 4);
-    console.log(results);
+    const randomResults = results.sort(() => Math.random() - 0.5);
+    results = randomResults.slice(0, 4);
 
     return (
-        // <div className="results-list w-[100%] bg-zinc-800 text-center rounded-b-md shadow-md overflow-y-hidden">
         <div className="results-list absolute lg:top-[45px] md:ml-3 top-[35px] lg:mr-2 w-[30vw] z-index-9 bg-zinc-800 shadow-md pl-[8px] py-1 rounded-b-md flex flex-col items-center">
             {results[0]?.champion ? (
                 <div
