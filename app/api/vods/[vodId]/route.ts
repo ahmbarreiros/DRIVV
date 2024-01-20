@@ -27,6 +27,17 @@ export async function GET(
             where: {
                 id: vodId,
             },
+            include: {
+                comments: {
+                    include: {
+                        user: {
+                            select: {
+                                email: true,
+                            },
+                        },
+                    },
+                },
+            },
         });
 
         if (!vod) {

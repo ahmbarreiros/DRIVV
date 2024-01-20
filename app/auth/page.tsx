@@ -56,15 +56,12 @@ const Auth = () => {
     return (
         // TODO(alb): Center logo?
 
-        <div className="relative h-full w-full bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+        <div className="relative min-h-[100vh] h-auto w-auto bg-zinc-800 m-0">
             {/* TODO(alb): change opacity on large/medium screens?*/}
-            <div className="bg-black w-full h-full md:bg-opacity-70">
-                <nav className="px-12 py-5">
-                    <img src="/images/logo.png" alt="logo" className="h-48" />
-                </nav>
-                <div className="flex justify-center">
+            <div className="bg-black w-auto h-auto md:bg-opacity-70 h-screen">
+                <div className="relative flex flex-row justify-center m-auto">
                     {/* TODO(alb): change width on large screens?*/}
-                    <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md md:w-3/5 rounded-md w-full">
+                    <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md md:w-3/5 rounded-md w-full h-auto">
                         <h2 className="text-white text-4xl mb-8 font-semibold">
                             {account == "login" ? "Sign in" : "Register"}
                         </h2>

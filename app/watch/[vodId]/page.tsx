@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import useVOD from "@/hooks/useVOD";
 import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
+import CommentSection from "@/components/CommentSection";
+import useCreateComment from "@/hooks/useCreateComment";
 
 export default function Watch({
     params,
@@ -14,8 +16,10 @@ export default function Watch({
 }) {
     const router = useRouter();
     const vodId = params?.vodId;
-    const { data } = useVOD(vodId);
-
+    const { data, isLoading } = useVOD(vodId);
+    // const { addComment } = useCreateComment();
+    if (!isLoading) {
+    }
     return (
         <div className="h-screen w-screen bg-black">
             <nav className="fixed w-full flex flex-row items-center justify-between bg-black/70 fadein">
@@ -53,6 +57,7 @@ export default function Watch({
                 loading="eager"
                 allowFullScreen
             ></iframe>
+            {/* <CommentSection comments={data?.vod.comments} /> */}
         </div>
     );
 }
