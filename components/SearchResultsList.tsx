@@ -3,10 +3,11 @@ import { FaLocationArrow } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
 const SearchResultsList = ({ results }: any) => {
+    const router = useRouter();
     if (!results) {
         return null;
     }
-    const router = useRouter();
+
     const randomResults = results.sort(() => Math.random() - 0.5);
     results = randomResults.slice(0, 4);
 
@@ -16,7 +17,7 @@ const SearchResultsList = ({ results }: any) => {
                 <div
                     className="championResult flex flex-row justify-center items-center gap-1 text-center mt-4 border-b-2 border-b-white hover:text-gray-300"
                     onClick={() => {
-                        router.push(`/champion/${results[0]?.champion}`);
+                        router.push(`/champion/${results[0].champion}`);
                     }}
                 >
                     <FaLocationArrow size={10} />

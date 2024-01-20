@@ -55,13 +55,13 @@ const NavBar = () => {
                     backgroundVisibility ? "bg-zinc-900/90" : ""
                 }`}
             >
-                <img
-                    className="h-10 lg:h-14"
-                    src="/images/logo.png"
-                    alt="logo"
-                />
+                <div className="flex justify-center items-center h-10 lg:h-14 ">
+                    <h1 className="text-white font-bold text-2xl align-center shadow-xl">
+                        DRIVV.<span className="text-[#f25f1b]">gg</span>
+                    </h1>
+                </div>
                 {/* TODO(alb): Change width where it changes visibility later */}
-                <div className="flex-row ml-8 gap-7 hidden md:flex">
+                <div className="flex-row ml-5 gap-7 hidden md:flex">
                     <NavBarItem label="Inicio" redirection="/" />
                     <NavBarItem label="Top" redirection="/roles/Top" />
                     <NavBarItem label="Jungle" redirection="/roles/Jungle" />
@@ -92,7 +92,7 @@ const NavBar = () => {
                             <BsSearch className="h-5 w-5" />
                         </button>
                     </div>
-                    <div
+                    {/* <div
                         // TODO(alb): maybe set this differently if necessary.
                         // TODO(alb): could change this to when hover?
                         onClick={() => setAccountVisibility(!accountVisibility)}
@@ -101,13 +101,13 @@ const NavBar = () => {
                         <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
                             <img src="/images/logo.png" alt="image" />
                         </div>
-                        <BsChevronDown
+                        {/* <BsChevronDown
                             className={`text-white transition duration-300 ${
                                 accountVisibility ? "rotate-180" : "rotate-0"
                             }`}
                         />
                         <AccountMenu visible={accountVisibility} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </nav>
