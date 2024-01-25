@@ -36,10 +36,8 @@ const Roles = ({
             </main>
         );
     }
-    console.log(vods?.vods);
-    const length = vods.vods.length;
+    const length = vods?.vods.length;
     vods.vods = vods?.vods.slice(0, 20);
-    console.log(vods?.vods);
 
     return (
         <main>

@@ -15,7 +15,6 @@ export default function Home() {
     const { data: mid = [] } = useRandomTypeList("Mid");
     const { data: bot = [] } = useRandomTypeList("Bot");
     const { data: support = [] } = useRandomTypeList("Support");
-    console.log(top, jg, mid, bot, support);
 
     return (
         <main className="select-none">

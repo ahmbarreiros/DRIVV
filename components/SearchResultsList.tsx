@@ -1,3 +1,4 @@
+"use client";
 import SearchResult from "./SearchResult";
 import { FaLocationArrow } from "react-icons/fa";
 import { useRouter } from "next/navigation";

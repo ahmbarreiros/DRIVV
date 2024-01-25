@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import NavBarItem from "./NavBarItem";

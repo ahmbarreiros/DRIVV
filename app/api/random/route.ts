@@ -13,7 +13,7 @@ export async function GET(req: Request) {
 
         return NextResponse.json({ value: randomVods[0], status: 200 });
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return NextResponse.json({ error, status: 400 });
     }
 }

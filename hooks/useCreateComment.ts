@@ -28,7 +28,7 @@ const useCreateComment = () => {
             setText("");
             await mutate();
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
 
@@ -43,7 +43,7 @@ const useCreateComment = () => {
             });
             await mutate();
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
     return { text, setText, comments, onSubmit, onDelete };

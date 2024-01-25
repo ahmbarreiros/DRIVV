@@ -36,7 +36,6 @@ const Champion = ({
             </main>
         );
     }
-    console.log(vods);
     const length = vods.vods.length;
     // vods.vods = vods.vods.slice(0, 20);
 

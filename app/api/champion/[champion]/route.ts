@@ -1,8 +1,5 @@
 import { NextResponse } from "next/server";
-import { NextApiRequest } from "next";
 import prismadb from "@/lib/prismadb";
-import serverAuth from "@/lib/serverAuth";
-import { log } from "console";
 
 export async function GET(
     req: Request,

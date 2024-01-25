@@ -44,7 +44,7 @@ export async function POST(req: Request) {
         return NextResponse.json(user, { status: 200 });
     } catch (error) {
         // TODO(alb): Change this for prod!
-        console.log(error);
+        // console.log(error);
         return NextResponse.json(error, { status: 400 });
     }
 }
