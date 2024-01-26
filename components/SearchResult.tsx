@@ -23,11 +23,11 @@ const SearchResult = ({ result }: any) => {
                     "/maxresdefault.jpg"
                 }
                 alt=""
-                className="w-[40%] rounded-xl m-3 lg:mr-5"
+                className="w-[40%] rounded-xl mt-3 md:m-3 lg:mr-5 "
             />
-            <div className="text flex flex-col items-center justify-center lg:ml-5">
-                <h4 className="text-md">{result.title}</h4>
-                <div className="flex flex-row gap-1 text-sm">
+            <div className="text flex flex-col items-center justify-center lg:ml-3">
+                <h4 className="text-[11px] md:text-[16px]">{result.title}</h4>
+                <div className="flex flex-row gap-1 text-[12px] opacity-0 absolute lg:opacity-100 lg:relative">
                     <p>{result.champion}</p>
                     <p>{result.role}</p>
                     <p>{result.result}</p>
