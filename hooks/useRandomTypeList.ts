@@ -6,9 +6,9 @@ const useRandomTypeList = (type?: string) => {
         type ? `/api/random/randomFour/${type}` : null,
         fetcher,
         {
-            revalidateIfStale: false,
+            revalidateIfStale: true,
             revalidateOnFocus: false,
-            revalidateOnReconnect: false,
+            revalidateOnReconnect: true,
         }
     );
     return {

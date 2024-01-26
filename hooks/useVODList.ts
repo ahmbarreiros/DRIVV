@@ -3,9 +3,9 @@ import fetcher from "@/lib/fetcher";
 
 const useVODList = () => {
     const { data, error, isLoading } = useSWR("/api/vods", fetcher, {
-        revalidateIfStale: false,
+        revalidateIfStale: true,
         revalidateOnFocus: false,
-        revalidateOnReconnect: false,
+        revalidateOnReconnect: true,
     });
 
     return {

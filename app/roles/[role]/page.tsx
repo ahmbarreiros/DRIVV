@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/Footer";
 import InfoModal from "@/components/InfoModal";
 import NavBar from "@/components/NavBar";
 import VODList from "@/components/VODList";
@@ -43,20 +44,20 @@ const Roles = ({
         <main>
             <InfoModal visible={isOpen} onClose={closeModal} />
             <NavBar />
-            <div
-                className="relative lg:pt-40 pt-20 lg:pb-40 bg-gradient-to-br from-zinc-900 from-60% to-[#80320e] h-auto min-h-[100vh]"
-                id="vods-container"
-            >
-                {length != 0 ? (
-                    <VODList
-                        title={vods?.vods[0]?.role + " Vods"}
-                        data={vods?.vods}
-                    />
-                ) : (
-                    <h1 className="text-white text-xl text-center h-[58vh] overflow-y-hidden">
-                        Nothing to see here yet...
-                    </h1>
-                )}
+            <div className="relative  bg-gradient-to-br from-zinc-900 from-60% to-[#80320e] h-auto min-h-[100vh]">
+                <div className="lg:pt-40 pt-20 pb-40" id="vods-container">
+                    {length != 0 ? (
+                        <VODList
+                            title={vods?.vods[0]?.role + " Vods"}
+                            data={vods?.vods}
+                        />
+                    ) : (
+                        <h1 className="text-white text-xl text-center h-[58vh] overflow-y-hidden">
+                            Nothing to see here yet...
+                        </h1>
+                    )}
+                </div>
+                <Footer className="pb-10" />
             </div>
         </main>
     );

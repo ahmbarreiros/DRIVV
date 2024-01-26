@@ -4,8 +4,8 @@ import { use } from "react";
 
 const useBillboard = () => {
     const { data, error, isLoading } = useSWR("/api/random", fetcher, {
-        revalidateIfStale: false,
-        revalidateOnReconnect: false,
+        revalidateIfStale: true,
+        revalidateOnReconnect: true,
         revalidateOnFocus: false,
     });
 

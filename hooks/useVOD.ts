@@ -6,9 +6,9 @@ const useVOD = (id?: string) => {
         id ? `/api/vods/${id}` : null,
         fetcher,
         {
-            revalidateIfStale: false,
+            revalidateIfStale: true,
             revalidateOnFocus: false,
-            revalidateOnReconnect: false,
+            revalidateOnReconnect: true,
         }
     );
 

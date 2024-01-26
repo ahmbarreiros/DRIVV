@@ -6,9 +6,9 @@ const useChampionList = (champion?: string) => {
         champion ? `/api/champion/${champion}` : null,
         fetcher,
         {
-            revalidateIfStale: false,
+            revalidateIfStale: true,
             revalidateOnFocus: false,
-            revalidateOnReconnect: false,
+            revalidateOnReconnect: true,
         }
     );
     return {

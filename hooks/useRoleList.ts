@@ -6,9 +6,9 @@ const useRoleList = (role?: string) => {
         role ? `/api/roles/${role}` : null,
         fetcher,
         {
-            revalidateIfStale: false,
+            revalidateIfStale: true,
             revalidateOnFocus: false,
-            revalidateOnReconnect: false,
+            revalidateOnReconnect: true,
         }
     );
     return {

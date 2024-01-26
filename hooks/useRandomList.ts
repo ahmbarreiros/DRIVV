@@ -6,9 +6,9 @@ const useVODList = () => {
         "/api/random/randomFour",
         fetcher,
         {
-            revalidateIfStale: false,
+            revalidateIfStale: true,
             revalidateOnFocus: false,
-            revalidateOnReconnect: false,
+            revalidateOnReconnect: true,
         }
     );
 
