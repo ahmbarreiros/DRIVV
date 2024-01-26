@@ -34,7 +34,7 @@ export default function Watch({
                         {data?.vod?.title}
                     </p>
                 </div>
-                <div className="text-white relative r-0 right-0 text-sm flex pr-10 m-3 justify-end z-10 select-none">
+                <div className="text-white relative r-0 right-0 text-sm flex pr-10 m-3 justify-end z-10 select-none opacity-0 absolute md:opacity-100 md:relative">
                     <p className="p-3">{data?.vod?.patch} </p>
                     <p className="p-3">{data?.vod?.role} </p>
                     <p className="p-3">{data?.vod?.server} </p>
