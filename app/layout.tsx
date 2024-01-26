@@ -2,7 +2,7 @@ import "./globals.css";
 import { NextAuthProvider } from "@/components/SessionProvider";
 
 export const metadata = {
-    title: "DRIVV",
+    title: "Learn matchups / DRIVV",
     description: "Learn matchups and play them like a challenger!",
 };
 
