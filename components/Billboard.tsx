@@ -12,7 +12,7 @@ const Billboard = () => {
         openModal(data?.value?.id);
     }, [openModal, data?.value?.id]);
 
-    if (isLoading) {
+    if (!data) {
         return (
             <div className="relative h-[56.25vw]">
                 {/* For future videos} */}
@@ -36,7 +36,7 @@ const Billboard = () => {
                     className="-z-1 relative block w-full h-[56.25vw] object-cover  brightness-[60%] transition duration-300"
                     src={
                         "https://i.ytimg.com/vi/" +
-                        data?.value.URL +
+                        data?.value?.URL +
                         "/maxresdefault.jpg"
                     }
                     alt=""

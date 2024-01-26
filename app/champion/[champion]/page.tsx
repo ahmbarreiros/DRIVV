@@ -5,6 +5,7 @@ import VODList from "@/components/VODList";
 import useInfoModal from "@/hooks/useInfoModel";
 import useChampionList from "@/hooks/useChampionList";
 import Footer from "@/components/Footer";
+import { isEmpty } from "lodash";
 
 const Champion = ({
     params,
@@ -17,7 +18,7 @@ const Champion = ({
     const champion = params?.champion;
 
     const { data: vods = [], isLoading } = useChampionList(champion);
-    if (isLoading) {
+    if (isEmpty(vods)) {
         return (
             <main>
                 <InfoModal visible={isOpen} onClose={closeModal} />

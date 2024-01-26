@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import VODList from "@/components/VODList";
 import useInfoModal from "@/hooks/useInfoModel";
 import useRoleList from "@/hooks/useRoleList";
+import { isEmpty } from "lodash";
 
 const Roles = ({
     params,
@@ -17,7 +18,7 @@ const Roles = ({
     const role = params?.role;
 
     const { data: vods = [], isLoading } = useRoleList(role);
-    if (isLoading) {
+    if (isEmpty(vods)) {
         return (
             <main>
                 <InfoModal visible={isOpen} onClose={closeModal} />

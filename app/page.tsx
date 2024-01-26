@@ -7,6 +7,7 @@ import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModel";
 import useRandomTypeList from "@/hooks/useRandomTypeList";
 import Footer from "@/components/Footer";
+import { isEmpty } from "lodash";
 
 export default function Home() {
     const { data: vods = [], isLoading } = useRandomList();
@@ -17,7 +18,7 @@ export default function Home() {
     const { data: bot = [] } = useRandomTypeList("Bot");
     const { data: support = [] } = useRandomTypeList("Support");
 
-    if (isLoading) {
+    if (isEmpty(vods)) {
         return (
             <main className="select-none">
                 <InfoModal visible={isOpen} onClose={closeModal} />
