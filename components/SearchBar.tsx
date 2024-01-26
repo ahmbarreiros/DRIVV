@@ -1,3 +1,4 @@
+"use client";
 import useVODList from "@/hooks/useVODList";
 import { useState } from "react";
 

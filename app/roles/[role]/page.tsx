@@ -18,7 +18,7 @@ const Roles = ({
     const role = params?.role;
 
     const { data: vods = [], isLoading } = useRoleList(role);
-    if (isEmpty(vods)) {
+    if (isLoading) {
         return (
             <main>
                 <InfoModal visible={isOpen} onClose={closeModal} />
@@ -40,6 +40,7 @@ const Roles = ({
     }
     const length = vods?.vods.length;
     vods.vods = vods?.vods.slice(0, 20);
+    vods.vods = vods?.vods.sort(() => Math.random() - 0.5);
 
     return (
         <main>

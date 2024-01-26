@@ -1,3 +1,4 @@
+"use client";
 import { useRouter } from "next/navigation";
 import InfoModal from "./InfoModal";
 import useInfoModal from "@/hooks/useInfoModel";

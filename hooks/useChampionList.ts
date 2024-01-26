@@ -9,6 +9,7 @@ const useChampionList = (champion?: string) => {
             revalidateIfStale: true,
             revalidateOnFocus: false,
             revalidateOnReconnect: true,
+            revalidateOnMount: true,
         }
     );
     return {

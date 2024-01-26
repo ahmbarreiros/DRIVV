@@ -1,3 +1,4 @@
+"use client";
 import React, { useCallback } from "react";
 import useBillboard from "@/hooks/useBillboard";
 import { AiOutlineInfoCircle } from "react-icons/ai";
