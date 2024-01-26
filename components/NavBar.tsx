@@ -89,9 +89,7 @@ const NavBar = () => {
                             <SearchBar setResults={setResults} />
                             <SearchResultsList results={results} />
                         </div>
-                        <button>
-                            <BsSearch className="h-5 w-5" />
-                        </button>
+                        <BsSearch className="h-5 w-5 opacity-0 md:opacity-100 absolute md:relative" />
                     </div>
                     {/* <div
                         // TODO(alb): maybe set this differently if necessary.

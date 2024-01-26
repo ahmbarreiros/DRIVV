@@ -85,7 +85,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                         isVisible ? "scale-100" : "scale-0"
                     } transform duration-300 relative flex-auto bg-zinc-900 drop-shadow-md`}
                 >
-                    <div className="relative h-96">
+                    <div className="relative md:h-96 h-full">
                         <video
                             src={data?.vod?.URL}
                             poster={
@@ -116,15 +116,11 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="px-12 py-8">
-                        <div className="flex flex-row items-center gap-2 text-lg">
-                            <BsFillCalendarCheckFill className="text-green-400" />
-                            <p className="text-white font-semibold">Recente</p>
-                        </div>
+                    <div className="px-12 py-8 w-full">
                         <p className="text-white text-lg">
                             {data?.vod?.duration}
                         </p>
-                        <div className="flex flex-row items-center gap-2 text-sm">
+                        <div className="flex flex-row items-center gap-2 text- flex-wrap">
                             <p className="text-white text-sm">
                                 {data?.vod?.champion}
                             </p>

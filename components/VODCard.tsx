@@ -1,8 +1,9 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { BsFillPlayFill, BsFillCalendarCheckFill } from "react-icons/bs";
 import { useRouter } from "next/navigation";
 import useInfoModal from "@/hooks/useInfoModel";
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import { useMediaQuery } from "@react-hook/media-query";
 
 interface VODCardProps {
     data: Record<string, any>;
@@ -11,16 +12,34 @@ interface VODCardProps {
 const VODCard: React.FC<VODCardProps> = ({ data }) => {
     const router = useRouter();
 
+    const [isBig, setIsBig] = useState(false);
+
+    const match = useMediaQuery("(min-width: 768px)");
+    console.log(match);
+
+    useState(() => {
+        setIsBig(match);
+    });
+
     const { openModal } = useInfoModal();
     const handleOpenModal = useCallback(() => {
         openModal(data?.id);
     }, [openModal, data?.id]);
 
+    const handleClick = () => {
+        if (isBig) {
+            return router.push(`/watch/${data?.id}`);
+        } else {
+            return handleOpenModal();
+        }
+    };
+
     return (
-        <div className="group bg-[zinc-900] col-span relative h-[12vw]">
+        <div className="group bg-[zinc-900] col-span relative h-[24vw] md:h-[12vw]">
             <img
-                onClick={() => router.push(`/watch/${data?.id}`)}
-                className="cursor-pointer object-cover transition duration shadow-xl rounded-md group-hover:opacity-90 sm:group-hover:opacity-0 delay-500 w-full h-[12vw]"
+                // onClick={() => router.push(`/watch/${data?.id}`)}
+                onClick={handleClick}
+                className="cursor-pointer object-cover transition duration shadow-xl rounded-md group-hover:opacity-90 sm:group-hover:opacity-0 delay-500 w-full md:h-[12vw] h-[24vw]"
                 src={
                     "https://i.ytimg.com/vi/" + data?.URL + "/maxresdefault.jpg"
                 }

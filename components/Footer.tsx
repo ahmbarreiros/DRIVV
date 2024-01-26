@@ -5,7 +5,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className }) => {
     return (
         <div
-            className={`${className} text-white text-sm flex justify-center items-center m-auto pt-2`}
+            className={`${className} text-white text-[12px] sm:text-sm flex justify-center items-center m-auto pt-20 md:pt-10`}
         >
             Made by{"  "}
             <a

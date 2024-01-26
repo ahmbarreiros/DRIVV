@@ -53,7 +53,7 @@ const Champion = ({
                             data={vods?.vods}
                         />
                     ) : (
-                        <h1 className="text-white text-xl text-center h-[100vh] overflow-y-hidden">
+                        <h1 className="text-white text-xl text-center h-[100vh]">
                             Nothing to see here yet...
                         </h1>
                     )}
